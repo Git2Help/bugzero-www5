@@ -4,11 +4,31 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="HBC Informatique | Services Particuliers" description="Dépannage informatique pour particuliers à Monaco, Nice et Menton. Intervention rapide, maintenance et formation.">
+<Layout title="BUGZERO | Services Particuliers" description="Dépannage informatique pour particuliers à Monaco, Nice et Menton. Intervention rapide, maintenance et formation.">
   <fragment slot="header">
     <Header />
   </fragment>
 
+  <style>
+    @keyframes kineticReveal {
+      0% { opacity: 0; transform: translateZ(-800px) translateY(80px) rotateX(30deg) scale(0.8); filter: blur(12px); letter-spacing: -0.1em; }
+      60% { opacity: 1; transform: translateZ(50px) translateY(-10px) rotateX(-5deg) scale(1.02); filter: blur(0px); letter-spacing: -0.04em; }
+      100% { opacity: 1; transform: translateZ(0) translateY(0) rotateX(0deg) scale(1); filter: blur(0px); letter-spacing: -0.05em; }
+    }
+    @keyframes liquidFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes chromaticOffset {
+      0% { transform: translate(-3px, -2px) scale(1.01); filter: hue-rotate(0deg) blur(2px); }
+      100% { transform: translate(3px, 2px) scale(1.01); filter: hue-rotate(45deg) blur(3px); }
+    }
+    .animate-kinetic { animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; display: inline-block; will-change: transform, opacity, filter; }
+    .text-liquid { background: linear-gradient(110deg, #050505 0%, #4f46e5 25%, #7c3aed 50%, #2563eb 75%, #050505 100%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: liquidFlow 4s linear infinite; }
+    .text-aura { position: absolute; inset: -20px; background: linear-gradient(90deg, rgba(79,70,229,0.3), rgba(124,58,237,0.3), rgba(37,99,235,0.3)); filter: blur(30px); z-index: -1; opacity: 0; animation: auraReveal 2s 1s ease-out forwards, liquidFlow 4s linear infinite; border-radius: 50%; }
+    @keyframes auraReveal { to { opacity: 0.8; } }
+  </style>
   <!-- 1. Hero -->
   <section class="overflow-hidden lg:pt-36 lg:pb-48 bg-[#fcfcfc] pt-24 pb-32 relative">
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
@@ -27,9 +47,15 @@ import Footer from '../components/Footer.astro';
       </div>
       <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
         <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
-          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 200ms;">Votre PC</span>
-          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 400ms;">ne marche plus ?</span>
-          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 600ms;">On s'en occupe.</span>
+          <span class="block animate-kinetic" style="animation-delay: 200ms;">Votre PC</span>
+          <span class="block animate-kinetic" style="animation-delay: 400ms;">
+            <span class="relative inline-block">
+              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">ne marche plus</span>
+              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">ne marche plus</span>
+              <span class="text-aura"></span>
+            </span>
+          </span>
+          <span class="block animate-kinetic" style="animation-delay: 600ms;">On s'en occupe.</span>
         </h1>
       </div>
       <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
