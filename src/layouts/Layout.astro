@@ -1,0 +1,48 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <script is:inline src="https://cdn.tailwindcss.com"></script>
+  <script is:inline src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style is:inline>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    .scroll-reveal { opacity: 0; transform: translateY(2rem); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .scroll-reveal.revealed { opacity: 1; transform: translateY(0); }
+    .accordion-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .accordion-content.open { grid-template-rows: 1fr; }
+    .accordion-inner { overflow: hidden; }
+    .clip-text { background-clip: text; -webkit-background-clip: text; color: transparent; }
+  </style>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2M6V79H761');
+  </script>
+</head>
+<body class="bg-[#fcfcfc] text-[#0a0a0a] antialiased selection:bg-[#4f46e5] selection:text-white" style="font-family: 'Inter', system-ui, sans-serif;">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-[#0a0a0a] focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-white">
+    Skip to main content
+  </a>
+
+  <slot name="header" />
+
+  <main id="main" class="">
+    <slot />
+  </main>
+
+  <slot name="footer" />
+</body>
+</html>

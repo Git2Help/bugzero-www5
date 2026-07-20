@@ -1,17 +1,654 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="HBC Informatique | Votre partenaire IT à Monaco" description="Solutions IT professionnelles pour entreprises et particuliers à Monaco, Nice et Menton.">
+  <fragment slot="header">
+    <Header />
+  </fragment>
+
+  <!-- Hero Section -->
+  <section class="overflow-hidden lg:pt-36 lg:pb-48 bg-[#fcfcfc] pt-24 pb-32 relative">
+    <style>
+      @keyframes kineticReveal {
+        0% { opacity: 0; transform: translateZ(-800px) translateY(80px) rotateX(30deg) scale(0.8); filter: blur(12px); letter-spacing: -0.1em; }
+        60% { opacity: 1; transform: translateZ(50px) translateY(-10px) rotateX(-5deg) scale(1.02); filter: blur(0px); letter-spacing: -0.04em; }
+        100% { opacity: 1; transform: translateZ(0) translateY(0) rotateX(0deg) scale(1); filter: blur(0px); letter-spacing: -0.05em; }
+      }
+      @keyframes liquidFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes chromaticOffset {
+        0% { transform: translate(-3px, -2px) scale(1.01); filter: hue-rotate(0deg) blur(2px); }
+        100% { transform: translate(3px, 2px) scale(1.01); filter: hue-rotate(45deg) blur(3px); }
+      }
+      .animate-kinetic { animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; display: inline-block; will-change: transform, opacity, filter; }
+      .text-liquid { background: linear-gradient(110deg, #050505 0%, #4f46e5 25%, #7c3aed 50%, #2563eb 75%, #050505 100%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: liquidFlow 4s linear infinite; }
+      .text-aura { position: absolute; inset: -20px; background: linear-gradient(90deg, rgba(79,70,229,0.3), rgba(124,58,237,0.3), rgba(37,99,235,0.3)); filter: blur(30px); z-index: -1; opacity: 0; animation: auraReveal 2s 1s ease-out forwards, liquidFlow 4s linear infinite; border-radius: 50%; }
+      @keyframes auraReveal { to { opacity: 0.8; } }
+    </style>
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
+      <canvas id="webgl-canvas" class="absolute inset-0 w-full h-full opacity-40"></canvas>
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.12)_0%,transparent_60%)] blur-[100px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fcfcfc]/30 via-[#fcfcfc]/80 to-[#fcfcfc]"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wMjUpIi8+PC9zdmc+')] opacity-50" style="-webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 80%); mask-image: linear-gradient(to bottom, black 20%, transparent 80%);"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div class="scroll-reveal revealed" style="transition-delay: 100ms;">
+        <div class="mb-8 inline-flex items-center rounded-full border border-[#e5e5e5] bg-white/60 px-4 py-1.5 text-xs font-medium text-[#171717] shadow-sm backdrop-blur-md transition-colors hover:border-[#d4d4d4] hover:bg-white cursor-pointer">
+          <span class="relative flex h-2 w-2 mr-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
+          </span>
+          Nouveaux projets acceptés
+          <svg class="ml-2 h-3.5 w-3.5 text-[#666]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </div>
+      </div>
+      <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
+        <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
+          <span class="block animate-kinetic" style="animation-delay: 200ms;">Votre partenaire</span>
+          <span class="block animate-kinetic" style="animation-delay: 400ms;">
+            <span class="relative inline-block">
+              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">informatique</span>
+              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">informatique</span>
+              <span class="text-aura"></span>
+            </span>
+          </span>
+          <span class="block animate-kinetic" style="animation-delay: 600ms;">à Monaco.</span>
+        </h1>
+      </div>
+      <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
+        <p class="text-base leading-relaxed text-[#4a4a4a] sm:text-lg lg:text-xl">
+          HBC Informatique vous accompagne dans tous vos projets IT : maintenance, cybersécurité, développement web et assistance personnalisée pour les professionnels et particuliers.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/professionnel" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
+            Nos services
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Ticker -->
+  <section class="border-y scroll-reveal revealed bg-white border-[#eaeaea] pt-10 pb-10">
+    <style>
+      @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .animate-marquee-scroll { animation: marquee-scroll 30s linear infinite; }
+      .animate-marquee-scroll:hover { animation-play-state: paused; }
+      .mask-edges { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+    </style>
+    <div class="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8">
+      <p class="mb-8 text-center text-xs font-medium uppercase tracking-widest text-[#888]">Ils nous font confiance</p>
+      <div class="flex overflow-hidden mask-edges group">
+        <div class="flex w-max animate-marquee-scroll grayscale transition-all duration-500 group-hover:grayscale-0 opacity-60 group-hover:opacity-100">
+          <div class="flex items-center justify-around min-w-max gap-16 pr-16 sm:gap-24 sm:pr-24">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/abm.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/discord.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/docusign.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/ideo.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/lattice.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/the-new-york-times.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/upwork.svg" alt="Client" class="h-5 w-auto">
+          </div>
+          <div class="flex items-center justify-around min-w-max gap-16 pr-16 sm:gap-24 sm:pr-24">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/abm.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/discord.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/docusign.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/ideo.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/lattice.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/the-new-york-times.svg" alt="Client" class="h-5 w-auto">
+            <img src="https://dhygzobemt712.cloudfront.net/Web/logos/dark/upwork.svg" alt="Client" class="h-5 w-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-[#fcfcfc]">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 scroll-reveal">
+        <h2 class="text-[clamp(2.4rem,5vw,4.5rem)] leading-[1] font-medium tracking-tighter max-w-3xl">
+          Solutions conçues pour<br>
+          votre croissance.
+        </h2>
+        <a href="/professionnel" class="inline-flex items-center gap-2 text-sm font-medium text-[#4f46e5] transition-all hover:gap-3">
+          Voir tous les services
+          <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"></iconify-icon>
+        </a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e44ec1fe-2eb5-4aee-917b-f31f10e9f350/1600w.jpg" alt="Maintenance" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2">
+              <iconify-icon icon="solar:pen-new-square-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Maintenance IT</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-[#666]">Forfaits de maintenance adaptés à vos besoins, de 199€ à 1299€ par mois. Support réactif et suivi personnalisé.</p>
+          </div>
+        </article>
+        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e414d578-afd1-4518-9e6f-71869b5d327a/1600w.jpg" alt="Cybersécurité" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2">
+              <iconify-icon icon="solar:devices-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Cybersécurité</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-[#666]">Tests d'intrusion, solutions Bitdefender, conformité RGPD et NIS2. Protégez votre entreprise des menaces numériques.</p>
+          </div>
+        </article>
+        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 300ms;">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f8f2e308-3a78-44ba-ad9b-3f23f5863b94_1600w.webp" alt="Visibilité Web" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2">
+              <iconify-icon icon="solar:magic-stick-3-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Visibilité Web</h3>
+            </div>
+            <p class="text-sm leading-relaxed text-[#666]">Création de sites, SEO, SEA et Fonds Bleu 30-70%. Propulsez votre présence en ligne avec des solutions sur mesure.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters Section -->
+  <section class="border-y border-[#eaeaea] bg-white relative overflow-hidden">
+    <div class="absolute left-1/2 top-0 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#4f46e5] to-transparent opacity-50"></div>
+    <div class="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4 divide-x divide-[#eaeaea]/50">
+        <div class="text-center scroll-reveal">
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="150">0</span>+</p>
+          <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Clients Satisfaits</p>
+        </div>
+        <div class="text-center scroll-reveal" style="transition-delay: 100ms;">
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="10">0</span>+</p>
+          <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Années d'Expérience</p>
+        </div>
+        <div class="text-center scroll-reveal" style="transition-delay: 200ms;">
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="500">0</span>+</p>
+          <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Interventions Réalisées</p>
+        </div>
+        <div class="text-center scroll-reveal" style="transition-delay: 300ms;">
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="99">0</span>%</p>
+          <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Taux de Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="z-10 sm:p-12 overflow-hidden bg-white w-full max-w-[90rem] border-[#eaeaea] border rounded-[2rem] mt-24 mr-auto mb-24 ml-auto pt-6 pr-6 pb-6 pl-6 relative shadow-sm">
+    <div class="flex flex-col md:flex-row gap-6 sm:px-0 pr-1 pl-1 items-start md:items-center">
+      <h2 class="text-[clamp(2.2rem,4vw,4rem)] leading-tight text-[#0a0a0a] font-normal tracking-tight max-w-4xl">Ce que disent nos clients.</h2>
+    </div>
+    <div class="h-px bg-[#eaeaea] mt-8"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 sm:mt-8 mt-6 items-center">
+      <div class="lg:col-span-12 relative">
+        <div class="relative overflow-hidden h-[500px] md:h-[450px] rounded-3xl mt-6">
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10"></div>
+          <div class="flex gap-6 overflow-x-auto scroll-smooth pr-6 pl-6 absolute top-0 right-0 bottom-0 left-0 items-center snap-x snap-mandatory pb-4" style="scrollbar-width: none; -ms-overflow-style: none;" id="testimonial-rail">
+            <article class="min-w-[85vw] md:min-w-[420px] sm:min-w-[520px] max-w-[640px] bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] transition-shadow hover:shadow-xl hover:shadow-black/5 snap-center -rotate-2 shadow-lg relative mt-4">
+              <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
+              <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10">"HBC a complètement transformé notre infrastructure IT. Leur réactivité et leur professionnalisme sont remarquables."</p>
+              <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0413dc82-d7c0-447d-aaa9-87ce398bca83_320w.webp" alt="Client" class="w-12 h-12 rounded-full object-cover grayscale">
+                <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Sophie Martin</div><div class="text-xs text-[#666] tracking-tight">Directrice, Cabinet Médical</div></div>
+              </div>
+            </article>
+            <article class="min-w-[85vw] md:min-w-[420px] sm:min-w-[520px] max-w-[640px] bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] transition-shadow hover:shadow-xl hover:shadow-black/5 snap-center rotate-1 shadow-lg relative mt-4">
+              <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
+              <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10">"Un service de dépannage incroyablement rapide. Mon PC était réparé en moins d'une heure. Je recommande vivement."</p>
+              <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b202409f-816e-4451-8ac9-bd0b04439d1b_320w.webp" alt="Client" class="w-12 h-12 rounded-full object-cover grayscale">
+                <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Thomas Blanc</div><div class="text-xs text-[#666] tracking-tight">Indépendant, Nice</div></div>
+              </div>
+            </article>
+            <article class="min-w-[85vw] md:min-w-[420px] sm:min-w-[520px] max-w-[640px] bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] transition-shadow hover:shadow-xl hover:shadow-black/5 snap-center -rotate-1 shadow-lg relative mt-4">
+              <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
+              <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10">"Le pack cybersécurité nous a permis d'être en conformité RGPD. L'équipe est compétente et à l'écoute."</p>
+              <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2d58e13a-35ac-4c87-af00-53519df6a64b_320w.webp" alt="Client" class="w-12 h-12 rounded-full object-cover grayscale">
+                <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Pierre Dubois</div><div class="text-xs text-[#666] tracking-tight">CEO, Start-up Monaco</div></div>
+              </div>
+            </article>
+          </div>
+          <div class="absolute bottom-2 right-6 z-20 flex items-center gap-3">
+            <button aria-label="Précédent" class="flex h-12 w-12 items-center justify-center rounded-full border border-[#eaeaea] bg-white transition-all hover:border-[#0a0a0a] hover:bg-[#0a0a0a] hover:text-white" id="testimonial-prev" style="pointer-events: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+            </button>
+            <button aria-label="Suivant" class="flex h-12 w-12 items-center justify-center rounded-full border border-[#0a0a0a] bg-[#0a0a0a] text-white transition-all hover:bg-[#1a1a1a]" id="testimonial-next" style="pointer-events: auto;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script is:inline>
+    (function() {
+      const rail = document.getElementById('testimonial-rail');
+      const prevButton = document.getElementById('testimonial-prev');
+      const nextButton = document.getElementById('testimonial-next');
+      if (rail && prevButton && nextButton) {
+        const getScrollDistance = () => {
+          const firstCard = rail.querySelector('article');
+          if (firstCard) return firstCard.offsetWidth + 24;
+          return window.innerWidth < 768 ? window.innerWidth * 0.85 : 540;
+        };
+        prevButton.addEventListener('click', function(e) { e.preventDefault(); rail.scrollBy({ left: -getScrollDistance(), behavior: 'smooth' }); });
+        nextButton.addEventListener('click', function(e) { e.preventDefault(); rail.scrollBy({ left: getScrollDistance(), behavior: 'smooth' }); });
+        function updateButtonStates() {
+          const scrollLeft = Math.ceil(rail.scrollLeft);
+          const maxScroll = Math.floor(rail.scrollWidth - rail.clientWidth);
+          if (scrollLeft <= 10) { prevButton.style.opacity = '0.5'; prevButton.style.pointerEvents = 'none'; } else { prevButton.style.opacity = '1'; prevButton.style.pointerEvents = 'auto'; }
+          if (scrollLeft >= maxScroll - 10) { nextButton.style.opacity = '0.5'; nextButton.style.pointerEvents = 'none'; } else { nextButton.style.opacity = '1'; nextButton.style.pointerEvents = 'auto'; }
+        }
+        updateButtonStates();
+        rail.addEventListener('scroll', updateButtonStates, { passive: true });
+        window.addEventListener('resize', updateButtonStates, { passive: true });
+      }
+    })();
+    </script>
+  </section>
+
+  <!-- Accordion Section -->
+  <section class="bg-[#fcfcfc] relative overflow-hidden border-y border-[#eaeaea]">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNCkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)] pointer-events-none"></div>
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-16 lg:gap-8 items-start">
+        <div class="lg:col-span-5 lg:sticky lg:top-32 self-start scroll-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-8 shadow-sm">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
+            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Notre Approche</span>
+          </div>
+          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Comment nous<br>accompagnons<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4f46e5] to-[#2563eb]">votre transformation.</span></h2>
+          <p class="text-base text-[#666] leading-relaxed max-w-sm">De l'audit à la mise en production, nous structurons chaque projet pour garantir des résultats concrets et durables.</p>
+        </div>
+        <div class="lg:col-span-7 mt-8 lg:mt-0">
+          <div class="border-t-2 border-[#0a0a0a]">
+            <div class="accordion-item group border-b border-[#eaeaea] scroll-reveal">
+              <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
+                <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#eef2ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">01</span>
+                <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#4f46e5] transition-colors duration-300">Audit &amp; Conseil</span>
+                </div>
+                <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#4f46e5] group-hover:rotate-90 shrink-0"></iconify-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-inner pb-12 pt-2 md:pl-8 relative z-10">
+                  <div class="bg-gradient-to-br from-[#0a0a0a] to-[#141414] rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl border border-white/5">
+                    <div class="absolute -top-32 -right-32 w-80 h-80 bg-[#4f46e5] rounded-full blur-[100px] opacity-30 pointer-events-none"></div>
+                    <div class="grid md:grid-cols-5 gap-10 relative z-10">
+                      <div class="md:col-span-3">
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Nous analysons</span> votre infrastructure existante, vos besoins et vos objectifs pour définir une feuille de route claire et priorisée.</p>
+                      </div>
+                      <div class="md:col-span-2">
+                        <ul class="flex flex-col gap-3">
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Audit d'infrastructure
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Analyse de sécurité
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Feuille de route
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item group border-b border-[#eaeaea] scroll-reveal">
+              <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
+                <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#f3e8ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">02</span>
+                <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#7c3aed] transition-colors duration-300">Mise en œuvre</span>
+                </div>
+                <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#7c3aed] group-hover:rotate-90 shrink-0"></iconify-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-inner pb-12 pt-2 md:pl-8 relative z-10">
+                  <div class="bg-gradient-to-br from-[#0a0a0a] to-[#141414] rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl border border-white/5">
+                    <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-[#7c3aed] rounded-full blur-[100px] opacity-25 pointer-events-none"></div>
+                    <div class="grid md:grid-cols-5 gap-10 relative z-10">
+                      <div class="md:col-span-3">
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Des solutions concrètes.</span> Nous déployons les infrastructures, sécurisons les systèmes et développons les outils adaptés à chaque besoin.</p>
+                      </div>
+                      <div class="md:col-span-2">
+                        <ul class="flex flex-col gap-3">
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Déploiement &amp; Installation
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Sécurisation des systèmes
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Développement sur mesure
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item group border-b border-[#eaeaea] scroll-reveal">
+              <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
+                <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#eff6ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">03</span>
+                <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#2563eb] transition-colors duration-300">Support &amp; Maintenance</span>
+                </div>
+                <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#2563eb] group-hover:rotate-90 shrink-0"></iconify-icon>
+              </button>
+              <div class="accordion-content">
+                <div class="accordion-inner pb-12 pt-2 md:pl-8 relative z-10">
+                  <div class="bg-gradient-to-br from-[#0a0a0a] to-[#141414] rounded-3xl p-8 md:p-10 relative overflow-hidden shadow-2xl border border-white/5">
+                    <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#2563eb] rounded-full blur-[120px] opacity-25 pointer-events-none"></div>
+                    <div class="grid md:grid-cols-5 gap-10 relative z-10">
+                      <div class="md:col-span-3">
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Un accompagnement continu.</span> Nous assurons la maintenance, les mises à jour et le support technique pour que votre système reste performant.</p>
+                      </div>
+                      <div class="md:col-span-2">
+                        <ul class="flex flex-col gap-3">
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Support réactif
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Maintenance préventive
+                          </li>
+                          <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                            Sauvegarde cloud
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Process Section -->
+  <section class="min-h-[120vh] overflow-hidden sm:py-32 flex flex-col select-none text-white font-sans bg-[#030303] w-full pt-24 pb-24 relative items-center">
+    <canvas class="absolute inset-0 w-full h-full pointer-events-none z-0 mix-blend-screen opacity-60" id="aura-schema-canvas"></canvas>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(79,70,229,0.05)_0%,rgba(3,3,3,1)_80%)] pointer-events-none z-0"></div>
+    <style>
+      @keyframes scan { 0% { transform: translateY(0); } 50% { transform: translateY(120vh); } 100% { transform: translateY(0); } }
+      .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.05); }
+      .schema-node { box-shadow: 0 0 20px rgba(79, 70, 229, 0.2), inset 0 0 10px rgba(79, 70, 229, 0.2); }
+    </style>
+    <div class="relative z-10 w-full max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mb-16 lg:mb-24 relative mix-blend-lighten">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-1.5 h-1.5 bg-[#a5b4fc] rounded-full animate-pulse"></div>
+          <div class="w-16 h-[1px] bg-gradient-to-r from-[#4f46e5] to-transparent"></div>
+          <span class="text-xs uppercase tracking-widest font-normal text-[#a5b4fc] font-mono">Méthode HBC</span>
+        </div>
+        <h2 class="text-[clamp(3rem,6vw,6rem)] font-normal leading-[0.9] tracking-tighter mb-8 text-[#eaeaea]">
+          <div class="overflow-hidden"><span class="block text-[#a0a0a0]">On ne fait pas</span></div>
+          <div class="overflow-hidden"><span class="block">que réparer.</span></div>
+          <div class="flex items-center gap-4 sm:gap-6 mt-2 sm:mt-4">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full border border-white/10 flex items-center justify-center" style="animation: spin 10s linear infinite;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-asterisk text-[#4f46e5] w-6 h-6 sm:w-8 sm:h-8"><path d="M12 6v12"></path><path d="M17.196 9 6.804 15"></path><path d="m6.804 9 10.392 6"></path></svg>
+            </div>
+            <span class="italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-[#a5b4fc] via-[#4f46e5] to-white pr-4">On innove.</span>
+          </div>
+        </h2>
+        <p class="text-base sm:text-lg text-[#a0a0a0] leading-relaxed max-w-xl font-normal border-l border-white/10 pl-6 ml-2 sm:ml-4">Notre méthode repose sur une stratégie solide et une exécution technique sans faille. Nous construisons des solutions qui tiennent dans la durée.</p>
+      </div>
+      <div class="relative w-full h-[900px] hidden lg:block">
+        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M 16.6 15 L 33 15 L 50 50 L 66 50 L 83.3 85" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.1"></path>
+          <path d="M 16.6 15 L 33 15 L 50 50 L 66 50 L 83.3 85" fill="none" stroke="#4f46e5" stroke-width="0.2" stroke-dasharray="20 100" stroke-dashoffset="120"><animate attributeName="stroke-dashoffset" values="120; -120" dur="6s" repeatCount="indefinite"></animate></path>
+          <path d="M 16.6 15 L 33 15 L 50 50 L 66 50 L 83.3 85" fill="none" stroke="#a5b4fc" stroke-width="0.1" stroke-dasharray="5 150" stroke-dashoffset="155"><animate attributeName="stroke-dashoffset" values="155; -155" dur="6s" repeatCount="indefinite"></animate></path>
+        </svg>
+        <div class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-dashed border-[#4f46e5]/10 z-0 pointer-events-none" style="animation: spin 30s linear infinite reverse;"></div>
+        <div class="absolute top-[15%] left-[16.6%] -translate-x-1/2 -translate-y-1/2 w-[340px] xl:w-[380px] z-10 group cursor-default">
+          <div class="absolute -inset-10 rounded-full border border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style="animation: spin 15s linear infinite;"><div class="absolute top-0 left-1/2 w-2 h-2 bg-[#4f46e5] rounded-full -translate-x-1/2 -translate-y-1/2 schema-node"></div></div>
+          <div class="relative glass-card p-8 rounded-[2rem] overflow-hidden transition-all duration-500 group-hover:border-[#4f46e5]/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(79,70,229,0.15)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#4f46e5]/20 to-transparent blur-2xl rounded-full translate-x-1/2 -translate-y-1/2 transition-colors duration-500 group-hover:from-[#4f46e5]/40"></div>
+            <div class="flex items-start justify-between mb-8 relative z-10">
+              <div class="font-mono text-xs text-[#a5b4fc] border border-[#4f46e5]/30 rounded-full px-3 py-1 bg-[#4f46e5]/10">SEQ_01</div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-microscope w-6 h-6 text-white/20 transition-colors duration-500 group-hover:text-[#a5b4fc]"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
+            </div>
+            <h3 class="text-2xl font-normal tracking-tight mb-3 text-white relative z-10">Diagnostic &amp; Analyse</h3>
+            <p class="text-[#a0a0a0] text-sm leading-relaxed mb-8 relative z-10 font-normal">Nous identifions précisément chaque problème pour proposer la solution la plus adaptée.</p>
+            <div class="w-full h-[1px] bg-gradient-to-r from-white/10 to-transparent transition-colors duration-500 group-hover:from-[#4f46e5]/50 relative z-10"></div>
+          </div>
+        </div>
+        <div class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[340px] xl:w-[380px] z-10 group cursor-default">
+          <div class="absolute -inset-10 rounded-full border border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style="animation: spin 15s linear infinite reverse;"><div class="absolute bottom-0 left-1/2 w-2 h-2 bg-[#7c3aed] rounded-full -translate-x-1/2 translate-y-1/2 schema-node" style="box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);"></div></div>
+          <div class="relative glass-card p-8 rounded-[2rem] overflow-hidden transition-all duration-500 group-hover:border-[#7c3aed]/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(124,58,237,0.15)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#7c3aed]/20 to-transparent blur-2xl rounded-full translate-x-1/2 -translate-y-1/2 transition-colors duration-500 group-hover:from-[#7c3aed]/40"></div>
+            <div class="flex items-start justify-between mb-8 relative z-10">
+              <div class="font-mono text-xs text-[#c4b5fd] border border-[#7c3aed]/30 rounded-full px-3 py-1 bg-[#7c3aed]/10">SEQ_02</div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool w-6 h-6 text-white/20 transition-colors duration-500 group-hover:text-[#c4b5fd]"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path><path d="m2.3 2.3 7.286 7.286"></path><circle cx="11" cy="11" r="2"></circle></svg>
+            </div>
+            <h3 class="text-2xl font-normal tracking-tight mb-3 text-white relative z-10">Intervention &amp; Réparation</h3>
+            <p class="text-[#a0a0a0] text-sm leading-relaxed mb-8 relative z-10 font-normal">Nous intervenons rapidement, sur site ou à distance, pour résoudre vos problèmes techniques.</p>
+            <div class="w-full h-[1px] bg-gradient-to-r from-white/10 to-transparent transition-colors duration-500 group-hover:from-[#7c3aed]/50 relative z-10"></div>
+          </div>
+        </div>
+        <div class="absolute top-[85%] left-[83.3%] -translate-x-1/2 -translate-y-1/2 w-[340px] xl:w-[380px] z-10 group cursor-default">
+          <div class="absolute -inset-10 rounded-full border border-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" style="animation: spin 15s linear infinite;"><div class="absolute top-1/2 right-0 w-2 h-2 bg-[#2563eb] rounded-full translate-x-1/2 -translate-y-1/2 schema-node" style="box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);"></div></div>
+          <div class="relative glass-card p-8 rounded-[2rem] overflow-hidden transition-all duration-500 group-hover:border-[#2563eb]/40 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.15)]">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#2563eb]/20 to-transparent blur-2xl rounded-full translate-x-1/2 -translate-y-1/2 transition-colors duration-500 group-hover:from-[#2563eb]/40"></div>
+            <div class="flex items-start justify-between mb-8 relative z-10">
+              <div class="font-mono text-xs text-[#93c5fd] border border-[#2563eb]/30 rounded-full px-3 py-1 bg-[#2563eb]/10">SEQ_03</div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu w-6 h-6 text-white/20 transition-colors duration-500 group-hover:text-[#93c5fd]"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+            </div>
+            <h3 class="text-2xl font-normal tracking-tight mb-3 text-white relative z-10">Suivi &amp; Optimisation</h3>
+            <p class="text-[#a0a0a0] text-sm leading-relaxed mb-8 relative z-10 font-normal">Un suivi régulier pour garantir la performance et la sécurité de vos systèmes sur le long terme.</p>
+            <div class="w-full h-[1px] bg-gradient-to-r from-white/10 to-transparent transition-colors duration-500 group-hover:from-[#2563eb]/50 relative z-10"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-6 mt-16 w-full lg:hidden relative z-10">
+        <div class="relative glass-card p-6 sm:p-8 rounded-[2rem] border-l-2 border-[#4f46e5]"><div class="font-mono text-xs text-[#a5b4fc] mb-4">SEQ_01</div><h3 class="text-xl sm:text-2xl font-normal tracking-tight mb-2 text-white">Diagnostic &amp; Analyse</h3><p class="text-[#a0a0a0] text-sm leading-relaxed font-normal">Nous identifions précisément chaque problème pour proposer la solution la plus adaptée.</p></div>
+        <div class="relative glass-card p-6 sm:p-8 rounded-[2rem] border-l-2 border-[#7c3aed]"><div class="font-mono text-xs text-[#c4b5fd] mb-4">SEQ_02</div><h3 class="text-xl sm:text-2xl font-normal tracking-tight mb-2 text-white">Intervention &amp; Réparation</h3><p class="text-[#a0a0a0] text-sm leading-relaxed font-normal">Nous intervenons rapidement, sur site ou à distance, pour résoudre vos problèmes techniques.</p></div>
+        <div class="relative glass-card p-6 sm:p-8 rounded-[2rem] border-l-2 border-[#2563eb]"><div class="font-mono text-xs text-[#93c5fd] mb-4">SEQ_03</div><h3 class="text-xl sm:text-2xl font-normal tracking-tight mb-2 text-white">Suivi &amp; Optimisation</h3><p class="text-[#a0a0a0] text-sm leading-relaxed font-normal">Un suivi régulier pour garantir la performance et la sécurité de vos systèmes sur le long terme.</p></div>
+      </div>
+    </div>
+    <script is:inline>
+    (function() {
+      const canvas = document.getElementById('aura-schema-canvas');
+      if (!canvas) return;
+      const gl = canvas.getContext('webgl', { alpha: true });
+      if (!gl) return;
+      const vsSource = `attribute vec2 position;void main(){gl_Position=vec4(position,0.0,1.0);}`;
+      const fsSource = `precision mediump float;uniform vec2 u_res;uniform float u_time;void main(){vec2 st=gl_FragCoord.xy/u_res;st.x*=u_res.x/u_res.y;vec2 pos=st*45.0;vec2 f_pos=fract(pos);float dist=distance(f_pos,vec2(0.5));float wave=sin(floor(pos.x)*0.15-u_time*0.8)*cos(floor(pos.y)*0.15+u_time*0.5);float radius=0.03+0.08*wave;float intensity=smoothstep(radius+0.08,radius,dist);float gridX=smoothstep(0.97,1.0,f_pos.x);float gridY=smoothstep(0.97,1.0,f_pos.y);float grid=max(gridX,gridY);vec3 pointColor=vec3(0.3,0.27,0.9);vec3 gridColor=vec3(0.08,0.08,0.15);vec3 finalColor=pointColor*intensity+gridColor*grid*0.5;float alpha=max(intensity,grid*0.2);float edgeFade=smoothstep(0.0,0.3,st.y)*smoothstep(1.0,0.7,st.y);gl_FragColor=vec4(finalColor,alpha*edgeFade*0.8);}`;
+      function createShader(gl,type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){gl.deleteShader(s);return null;}return s;}
+      const vertexShader=createShader(gl,gl.VERTEX_SHADER,vsSource);const fragmentShader=createShader(gl,gl.FRAGMENT_SHADER,fsSource);
+      const program=gl.createProgram();gl.attachShader(program,vertexShader);gl.attachShader(program,fragmentShader);gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))return;
+      gl.useProgram(program);const positions=new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]);
+      const positionBuffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,positionBuffer);gl.bufferData(gl.ARRAY_BUFFER,positions,gl.STATIC_DRAW);
+      const positionLocation=gl.getAttribLocation(program,'position');gl.enableVertexAttribArray(positionLocation);gl.vertexAttribPointer(positionLocation,2,gl.FLOAT,false,0,0);
+      const resLocation=gl.getUniformLocation(program,'u_res');const timeLocation=gl.getUniformLocation(program,'u_time');
+      function resizeCanvasToDisplaySize(c){const w=c.clientWidth,h=c.clientHeight;if(c.width!==w||c.height!==h){c.width=w;c.height=h;}}
+      function render(time){time*=0.001;resizeCanvasToDisplaySize(canvas);gl.viewport(0,0,gl.canvas.width,gl.canvas.height);gl.uniform2f(resLocation,gl.canvas.width,gl.canvas.height);gl.uniform1f(timeLocation,time);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(render);}
+      requestAnimationFrame(render);
+    })();
+    </script>
+  </section>
+
+  <!-- Dark CTA Section -->
+  <section class="relative overflow-hidden bg-[#0a0a0a] text-white">
+    <div class="absolute inset-0 opacity-60 mix-blend-screen pointer-events-none">
+      <div class="absolute left-[10%] top-[-10%] h-[30rem] w-[30rem] rounded-full bg-[#4f46e5] blur-[120px] transition-transform duration-[10s] ease-in-out hover:scale-110"></div>
+      <div class="absolute right-[5%] bottom-[-20%] h-[40rem] w-[40rem] rounded-full bg-[#7c3aed] blur-[150px] opacity-70"></div>
+      <div class="absolute left-[40%] top-[30%] h-[20rem] w-[20rem] rounded-full bg-[#2563eb] blur-[100px] opacity-50"></div>
+    </div>
+    <div class="relative mx-auto max-w-[90rem] px-4 py-32 text-center sm:px-6 lg:px-8 lg:py-48 scroll-reveal">
+      <h2 class="mx-auto max-w-4xl text-[clamp(3.5rem,7vw,7rem)] font-medium leading-[0.9] tracking-tighter">
+        Prêt à passer<br>
+        au numérique ?
+      </h2>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="/professionnel" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-medium text-[#0a0a0a] transition-all hover:scale-105">
+          <span class="relative z-10 flex items-center gap-2">
+            Découvrir nos offres
+            <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="transition-transform group-hover:translate-x-1"></iconify-icon>
+          </span>
+        </a>
+        <a href="/particulier" class="rounded-full bg-transparent border border-white/20 px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-white/10">
+          Service particulier
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer">
+    <Footer />
+  </fragment>
+</Layout>
+
+<script is:inline>
+  // Reduced motion check
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Mobile Menu Toggle
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', () => {
+      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    });
+  }
+
+  // Scroll Reveal Animation Observer
+  if (!reduceMotion) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    document.querySelectorAll('.scroll-reveal').forEach(el => { revealObserver.observe(el); });
+  } else {
+    document.querySelectorAll('.scroll-reveal').forEach(el => { el.classList.add('revealed'); });
+  }
+
+  // Animated Counters
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const endValue = parseInt(target.getAttribute('data-target'));
+        let startValue = 0;
+        const duration = 2000;
+        const startTime = performance.now();
+        const updateCounter = (currentTime) => {
+          const elapsedTime = currentTime - startTime;
+          if (elapsedTime < duration) {
+            const progress = elapsedTime / duration;
+            const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            target.innerText = Math.floor(easedProgress * endValue);
+            requestAnimationFrame(updateCounter);
+          } else { target.innerText = endValue; }
+        };
+        requestAnimationFrame(updateCounter);
+        observer.unobserve(target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.counter').forEach(counter => { counterObserver.observe(counter); });
+
+  // Interactive Accordion
+  const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+  accordionTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const content = trigger.nextElementSibling;
+      const icon = trigger.querySelector('.trigger-icon');
+      const isOpen = content.classList.contains('open');
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.trigger-icon').forEach(i => {
+        i.setAttribute('icon', 'solar:add-circle-linear');
+        i.style.transform = 'rotate(0deg)';
+      });
+      if (!isOpen) {
+        content.classList.add('open');
+        icon.setAttribute('icon', 'solar:minus-circle-linear');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Header Blur on Scroll
+  const header = document.getElementById('header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) { header.classList.add('shadow-sm'); } else { header.classList.remove('shadow-sm'); }
+    });
+  }
+
+  // --- WebGL Background Animation (Hero) ---
+  (function initHeroWebGL() {
+    const canvas = document.getElementById('webgl-canvas');
+    if (!canvas || typeof THREE === 'undefined' || reduceMotion) return;
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+    const geometry = new THREE.PlaneGeometry(2, 2);
+    const material = new THREE.ShaderMaterial({
+      uniforms: { u_time: { value: 0.0 }, u_resolution: { value: new THREE.Vector2() } },
+      vertexShader: `void main(){gl_Position=vec4(position,1.0);}`,
+      fragmentShader: `uniform float u_time;uniform vec2 u_resolution;vec3 permute(vec3 x){return mod(((x*34.0)+1.0)*x,289.0);}float snoise(vec2 v){const vec4 C=vec4(0.211324865405187,0.366025403784439,-0.577350269189626,0.024390243902439);vec2 i=floor(v+dot(v,C.yy));vec2 x0=v-i+dot(i,C.xx);vec2 i1;i1=(x0.x>x0.y)?vec2(1.0,0.0):vec2(0.0,1.0);vec4 x12=x0.xyxy+C.xxzz;x12.xy-=i1;i=mod(i,289.0);vec3 p=permute(permute(i.y+vec3(0.0,i1.y,1.0))+i.x+vec3(0.0,i1.x,1.0));vec3 m=max(0.5-vec3(dot(x0,x0),dot(x12.xy,x12.xy),dot(x12.zw,x12.zw)),0.0);m=m*m;m=m*m;vec3 x=2.0*fract(p*C.www)-1.0;vec3 h=abs(x)-0.5;vec3 ox=floor(x+0.5);vec3 a0=x-ox;m*=1.79284291400159-0.85373472095314*(a0*a0+h*h);vec3 g;g.x=a0.x*x0.x+h.x*x0.y;g.yz=a0.yz*x12.xz+h.yz*x12.yw;return 130.0*dot(m,g);}void main(){vec2 uv=gl_FragCoord.xy/u_resolution.xy;float n=snoise(uv*2.5+vec2(u_time*0.4,u_time*0.5));float n2=snoise(uv*1.5-vec2(u_time*0.3,u_time*0.2));vec3 colorIndigo=vec3(0.31,0.27,0.90);vec3 colorCyan=vec3(0.02,0.71,0.83);vec3 colorDeep=vec3(0.15,0.1,0.5);float mixVal=smoothstep(-0.6,0.8,n);vec3 finalColor=mix(colorDeep,colorIndigo,mixVal);float mixVal2=smoothstep(-0.4,0.9,n2);finalColor=mix(finalColor,colorCyan,mixVal2*0.8);float alphaFade=smoothstep(-0.2,0.6,uv.x);gl_FragColor=vec4(finalColor,alphaFade);}`
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+    function resizeCanvas() {
+      const section = canvas.closest('section');
+      const w = section ? section.clientWidth : window.innerWidth;
+      const h = section ? section.clientHeight : window.innerHeight;
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(w, h, false);
+      material.uniforms.u_resolution.value.set(w, h);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function animateWebGL(time) { material.uniforms.u_time.value = time * 0.002; renderer.render(scene, camera); requestAnimationFrame(animateWebGL); }
+    requestAnimationFrame(animateWebGL);
+  })();
+</script>

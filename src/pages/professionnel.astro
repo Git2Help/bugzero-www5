@@ -1,0 +1,374 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="HBC Informatique | Services Professionnels" description="Solutions IT pour professionnels à Monaco : maintenance, cybersécurité, développement web et infogérance.">
+  <fragment slot="header">
+    <Header />
+  </fragment>
+
+  <!-- 1. Hero -->
+  <section class="overflow-hidden lg:pt-36 lg:pb-48 bg-[#fcfcfc] pt-24 pb-32 relative">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.12)_0%,transparent_60%)] blur-[100px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fcfcfc]/30 via-[#fcfcfc]/80 to-[#fcfcfc]"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div class="scroll-reveal revealed" style="transition-delay: 100ms;">
+        <div class="mb-8 inline-flex items-center rounded-full border border-[#e5e5e5] bg-white/60 px-4 py-1.5 text-xs font-medium text-[#171717] shadow-sm backdrop-blur-md">
+          <span class="relative flex h-2 w-2 mr-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
+          </span>
+          Partenaire IT des entreprises à Monaco
+        </div>
+      </div>
+      <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
+        <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
+          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 200ms;">Votre partenaire</span>
+          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 400ms;">IT à Monaco</span>
+          <span class="block" style="animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; animation-delay: 600ms;">&nbsp;</span>
+        </h1>
+      </div>
+      <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
+        <p class="text-base leading-relaxed text-[#4a4a4a] sm:text-lg lg:text-xl">
+          HBC Informatique accompagne les entreprises monégasques et de la région dans leur transformation numérique. De la maintenance à la cybersécurité, nous sommes votre interlocuteur IT unique.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#contact" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
+            Nous contacter
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Formules Maintenance -->
+  <section class="bg-[#fcfcfc]">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Forfaits</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Formules de maintenance</h2>
+        <p class="text-base text-[#666] max-w-md mx-auto">Des solutions adaptées à la taille de votre entreprise, de 199€ à 1299€ par mois.</p>
+      </div>
+      <div class="relative w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-8 z-10" style="perspective: 1200px;">
+        <div class="relative w-full max-w-sm md:w-[24rem] h-[36rem] z-10">
+          <div class="relative w-full h-full rounded-[2rem] p-8 flex flex-col group transition-all duration-700 ease-out hover:-translate-y-4 hover:rotate-0 md:-rotate-6 md:translate-x-12" style="background: linear-gradient(145deg, #ffffff 0%, #f8f9fc 100%); box-shadow: 2px 4px 8px rgba(0,0,0,0.02), 8px 16px 24px rgba(0,0,0,0.03), 64px 96px 128px rgba(0,0,0,0.08), 80px 120px 160px rgba(79, 70, 229, 0.08), inset 0 1px 1px rgba(255,255,255,1), 0 0 0 1px rgba(0,0,0,0.04);">
+            <div class="flex justify-between items-start relative z-10 mb-8">
+              <div class="w-16 h-16 rounded-xl p-2.5 flex items-end justify-between gap-0.5 bg-white shadow-sm border border-[#eaeaea]">
+                <div class="w-full bg-[#4f46e5]/90 rounded-t-sm animate-pulse" style="height: 40%; animation-duration: 0.7s;"></div>
+                <div class="w-full bg-[#4f46e5]/90 rounded-t-sm animate-pulse" style="height: 85%; animation-duration: 1.2s; animation-delay: 0.2s;"></div>
+                <div class="w-full bg-[#4f46e5]/90 rounded-t-sm animate-pulse" style="height: 100%; animation-duration: 1.5s; animation-delay: 0.1s;"></div>
+                <div class="w-full bg-[#4f46e5]/90 rounded-t-sm animate-pulse" style="height: 30%; animation-duration: 0.8s; animation-delay: 0.7s;"></div>
+              </div>
+              <div class="flex flex-col items-end">
+                <div class="flex items-center gap-1.5 text-[#4f46e5] font-medium text-sm"><span class="tracking-tight uppercase">Starter</span></div>
+                <div class="text-[10px] text-[#4f46e5]/70 mt-1 uppercase tracking-widest">Maintenance</div>
+              </div>
+            </div>
+            <div class="relative z-10 mb-6">
+              <div class="flex items-end gap-2 mb-2">
+                <span class="text-5xl tracking-tighter text-[#0a0a0a] font-medium">199€</span>
+                <span class="text-sm text-[#666] mb-1 tracking-widest uppercase">/ Mois</span>
+              </div>
+              <h3 class="text-xl tracking-tight text-[#0a0a0a] mb-2 font-medium">TPE / Indépendant</h3>
+              <p class="text-xs text-[#666] leading-relaxed min-h-[2.5rem]">Support technique de base pour petites structures.</p>
+            </div>
+            <div class="relative z-10 flex flex-col gap-3 mb-8 flex-grow">
+              <div class="w-full h-px mb-1 bg-[#eaeaea]"></div>
+              <div class="flex items-start gap-3 text-xs text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Support téléphonique</span></div>
+              <div class="flex items-start gap-3 text-xs text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Dépannage à distance</span></div>
+              <div class="flex items-start gap-3 text-xs text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>1 intervention sur site/mois</span></div>
+            </div>
+            <button class="relative z-10 w-full py-3.5 px-5 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-[#f4f4f5] bg-white border border-[#eaeaea] shadow-sm">
+              <span class="text-xs text-[#0a0a0a] tracking-widest uppercase font-semibold">Choisir</span>
+              <iconify-icon icon="solar:alt-arrow-right-linear" class="text-[#4f46e5] text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+            </button>
+          </div>
+        </div>
+        <div class="relative w-full max-w-sm md:w-[24rem] h-[36rem] z-0">
+          <div class="relative w-full h-full rounded-[2rem] p-8 flex flex-col group transition-all duration-700 ease-out hover:-translate-y-4 hover:rotate-0 md:rotate-6 md:-translate-x-12" style="background: linear-gradient(145deg, #121212 0%, #050505 100%); box-shadow: 2px 4px 8px rgba(0,0,0,0.2), 8px 16px 24px rgba(0,0,0,0.3), 64px 96px 128px rgba(0,0,0,0.4), 80px 120px 160px rgba(10, 10, 10, 0.4), inset 0 1px 1px rgba(255,255,255,0.05), 0 0 0 1px rgba(255,255,255,0.1);">
+            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden rounded-[2rem]"><div class="absolute right-[-10%] top-[-10%] h-[15rem] w-[15rem] rounded-full bg-[#4f46e5] blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div></div>
+            <div class="flex justify-between items-start relative z-10 mb-8">
+              <div class="w-16 h-16 rounded-xl p-2.5 flex items-end justify-between gap-0.5 bg-[#1a1a1a] shadow-sm border border-white/10">
+                <div class="w-full bg-white/90 rounded-t-sm animate-pulse" style="height: 60%; animation-duration: 0.9s;"></div>
+                <div class="w-full bg-white/90 rounded-t-sm animate-pulse" style="height: 90%; animation-duration: 1.1s; animation-delay: 0.1s;"></div>
+                <div class="w-full bg-white/90 rounded-t-sm animate-pulse" style="height: 50%; animation-duration: 0.8s; animation-delay: 0.6s;"></div>
+                <div class="w-full bg-white/90 rounded-t-sm animate-pulse" style="height: 75%; animation-duration: 1.3s; animation-delay: 0.3s;"></div>
+              </div>
+              <div class="flex flex-col items-end">
+                <div class="flex items-center gap-1.5 text-white font-medium text-sm"><span class="tracking-tight uppercase">Premium</span></div>
+                <div class="text-[10px] text-white/50 mt-1 uppercase tracking-widest">Maintenance</div>
+              </div>
+            </div>
+            <div class="relative z-10 mb-6">
+              <div class="flex items-end gap-2 mb-2">
+                <span class="text-4xl tracking-tighter text-white font-medium">699€</span>
+                <span class="text-sm text-white/50 mb-1 tracking-widest uppercase">/ Mois</span>
+              </div>
+              <h3 class="text-xl tracking-tight text-white mb-2 font-medium">PME / ETI</h3>
+              <p class="text-xs text-[#a0a0a0] leading-relaxed min-h-[2.5rem]">Couverture complète pour entreprises en croissance.</p>
+            </div>
+            <div class="relative z-10 flex flex-col gap-3 mb-8 flex-grow">
+              <div class="w-full h-px mb-1 bg-white/10"></div>
+              <div class="flex items-start gap-3 text-xs text-white/90"><iconify-icon icon="solar:check-circle-linear" class="text-[#a5b4fc] text-base shrink-0"></iconify-icon><span>Tout le Starter</span></div>
+              <div class="flex items-start gap-3 text-xs text-white/90"><iconify-icon icon="solar:check-circle-linear" class="text-[#a5b4fc] text-base shrink-0"></iconify-icon><span>Interventions illimitées</span></div>
+              <div class="flex items-start gap-3 text-xs text-white/90"><iconify-icon icon="solar:check-circle-linear" class="text-[#a5b4fc] text-base shrink-0"></iconify-icon><span>Supervision 24/7</span></div>
+            </div>
+            <button class="relative z-10 w-full py-3.5 px-5 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-white/10 bg-[#1a1a1a] border border-white/10 shadow-sm">
+              <span class="text-xs text-white tracking-widest uppercase font-semibold">Choisir</span>
+              <iconify-icon icon="solar:alt-arrow-right-linear" class="text-white text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SécuriSite WP Pro -->
+  <section class="border-y border-[#eaeaea] bg-white relative overflow-hidden">
+    <div class="absolute left-1/2 top-0 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#4f46e5] to-transparent opacity-50"></div>
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Sécurité Web</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">SécuriSite WP Pro</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Protection complète pour votre site WordPress. Sécurité, mises à jour, sauvegarde et monitoring.</p>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 md:p-10 shadow-sm hover:shadow-2xl hover:shadow-[#4f46e5]/5 transition-all duration-500">
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <span class="text-5xl tracking-tighter text-[#0a0a0a] font-medium">99€</span>
+              <span class="text-sm text-[#666] mb-1 tracking-widest uppercase ml-2">/ Mois</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-[#4f46e5] font-medium text-sm">
+              <iconify-icon icon="solar:shield-check-linear" class="text-lg"></iconify-icon>
+              <span class="tracking-tight uppercase">Recommandé</span>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Mises à jour WordPress automatiques</span></div>
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Pare-feu applicatif (WAF)</span></div>
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Sauvegarde quotidienne cloud</span></div>
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Scan de vulnérabilités</span></div>
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Monitoring de disponibilité</span></div>
+            <div class="flex items-start gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Support prioritaire</span></div>
+          </div>
+          <button class="mt-10 w-full py-3.5 px-5 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-[#f4f4f5] bg-white border border-[#eaeaea] shadow-sm">
+            <span class="text-xs text-[#0a0a0a] tracking-widest uppercase font-semibold">Souscrire</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-[#4f46e5] text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Cybersécurité -->
+  <section class="bg-[#fcfcfc] relative overflow-hidden border-y border-[#eaeaea]">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMCwwLDAsMC4wNCkiLz48L3N2Zz4=')] [mask-image:linear-gradient(to_bottom,white_10%,transparent_90%)] pointer-events-none"></div>
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32 relative z-10">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Sécurité</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Cybersécurité</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Protégez votre entreprise contre les menaces numériques avec nos solutions de sécurité complètes.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="mb-6">
+            <iconify-icon icon="solar:bug-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Test d'intrusion</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Audit de sécurité complet de votre infrastructure. Identification et correction des vulnérabilités avant qu'elles ne soient exploitées.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="mb-6">
+            <iconify-icon icon="solar:shield-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Bitdefender</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Solution antivirus et anti-ransomware de nouvelle génération. Protection multi-points pour tous vos postes et serveurs.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="mb-6">
+            <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">RGPD &amp; NIS2</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Mise en conformité avec les réglementations européennes. Audit, documentation et déploiement des mesures techniques nécessaires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Visibilité Web -->
+  <section class="bg-white border-y border-[#eaeaea]">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 scroll-reveal">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-6 shadow-sm">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
+            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Web</span>
+          </div>
+          <h2 class="text-[clamp(2.4rem,5vw,4.5rem)] leading-[1] font-medium tracking-tighter max-w-3xl">Visibilité web</h2>
+        </div>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e44ec1fe-2eb5-4aee-917b-f31f10e9f350/1600w.jpg" alt="Création site" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2"><iconify-icon icon="solar:pen-new-square-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><h3 class="text-lg font-medium tracking-tight">Création de site</h3></div>
+            <p class="text-sm leading-relaxed text-[#666]">Sites vitrines, e-commerce ou sur mesure. Design moderne et responsive optimisé pour la conversion.</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e414d578-afd1-4518-9e6f-71869b5d327a/1600w.jpg" alt="SEO" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2"><iconify-icon icon="solar:devices-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><h3 class="text-lg font-medium tracking-tight">SEO &amp; SEA</h3></div>
+            <p class="text-sm leading-relaxed text-[#666]">Référencement naturel et campagnes publicitaires ciblées pour attirer plus de clients qualifiés.</p>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f8f2e308-3a78-44ba-ad9b-3f23f5863b94_1600w.webp" alt="Fonds Bleu" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+            <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="mb-3 flex items-center gap-2"><iconify-icon icon="solar:magic-stick-3-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><h3 class="text-lg font-medium tracking-tight">Fonds Bleu 30-70%</h3></div>
+            <p class="text-sm leading-relaxed text-[#666]">Bénéficiez d'une prise en charge de 30 à 70% de votre projet web via le Fonds Bleu. Éligibilité et dossier accompagnés.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Pack Infogérance -->
+  <section class="bg-[#fcfcfc] relative overflow-hidden">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Infogérance</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Pack Infogérance</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Une solution clé en main pour déléguer votre gestion IT en toute sérénité.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="mb-6"><iconify-icon icon="solar:server-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Installation</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Installation et configuration de vos équipements et logiciels. Prise en main rapide et sans stress.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="mb-6"><iconify-icon icon="solar:headphones-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Assistance</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Support technique réactif pour tous vos incidents. Intervention à distance ou sur site selon vos besoins.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="mb-6"><iconify-icon icon="solar:cloud-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">HelpBackup Cloud</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Sauvegarde cloud automatisée de vos données critiques. Restauration rapide en cas d'incident.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. À propos / Équipe -->
+  <section class="border-y border-[#eaeaea] bg-white">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Équipe</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Notre équipe</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Des experts passionnés à votre service.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-6 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:user-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-sm font-medium tracking-tight">Johan</h3>
+          <p class="text-xs text-[#666] mt-1">Fondateur &amp; Gérant</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-6 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 50ms;">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:user-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-sm font-medium tracking-tight">Paul</h3>
+          <p class="text-xs text-[#666] mt-1">Technicien Support</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-6 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:user-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-sm font-medium tracking-tight">Alex</h3>
+          <p class="text-xs text-[#666] mt-1">Développeur Web</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-6 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 150ms;">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:user-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-sm font-medium tracking-tight">Camelia</h3>
+          <p class="text-xs text-[#666] mt-1">Assistante &amp; Relation Client</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-6 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:users-group-rounded-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-sm font-medium tracking-tight">Partenaires</h3>
+          <p class="text-xs text-[#666] mt-1">Réseau d'experts</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Contact -->
+  <section id="contact" class="bg-[#fcfcfc]">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="grid gap-12 lg:grid-cols-2 items-start">
+        <div class="scroll-reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-8 shadow-sm">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
+            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Contact</span>
+          </div>
+          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Parlons de<br>votre projet</h2>
+          <p class="text-base text-[#666] leading-relaxed max-w-sm mb-8">Contactez-nous pour un devis gratuit ou un diagnostic sans engagement.</p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:phone-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><span>06 78 56 54 30</span></div>
+            <div class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:map-point-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><span>HBC Informatique, 33 Rue Grimaldi, Monaco</span></div>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 md:p-10 shadow-sm scroll-reveal">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div><label class="block text-xs font-medium uppercase tracking-widest text-[#666] mb-2">Nom</label><input type="text" class="w-full rounded-xl border border-[#eaeaea] px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#4f46e5] transition" placeholder="Votre nom"></div>
+              <div><label class="block text-xs font-medium uppercase tracking-widest text-[#666] mb-2">Email</label><input type="email" class="w-full rounded-xl border border-[#eaeaea] px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#4f46e5] transition" placeholder="votre@email.com"></div>
+            </div>
+            <div><label class="block text-xs font-medium uppercase tracking-widest text-[#666] mb-2">Message</label><textarea rows="4" class="w-full rounded-xl border border-[#eaeaea] px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#4f46e5] transition" placeholder="Décrivez votre besoin..."></textarea></div>
+            <button class="w-full py-3.5 px-5 rounded-xl bg-[#0a0a0a] text-white text-sm font-medium hover:bg-[#1a1a1a] transition">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer">
+    <Footer />
+  </fragment>
+</Layout>
