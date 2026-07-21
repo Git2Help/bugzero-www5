@@ -20,9 +20,36 @@
       </a>
 
       <div class="hidden items-center gap-2 lg:flex">
-        <a href="/professionnel" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium text-[#4a4a4a] transition hover:bg-[#f4f4f5] hover:text-[#0a0a0a]">
-          Professionnel
-        </a>
+        <div class="relative group">
+          <a href="/professionnel" class="flex min-h-11 items-center gap-1 rounded-full px-4 text-sm font-medium text-[#4a4a4a] transition hover:bg-[#f4f4f5] hover:text-[#0a0a0a]">
+            Professionnel
+            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-sm text-[#4f46e5] transition-transform duration-300 group-hover:rotate-180"></iconify-icon>
+          </a>
+          <div class="invisible absolute left-0 top-full w-64 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 z-50">
+            <div class="rounded-2xl border border-[#eaeaea] bg-white p-2 shadow-2xl shadow-[#4f46e5]/5">
+              <a href="/professionnel" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium tracking-tight text-[#4a4a4a] transition hover:bg-[#fcfcfc] hover:text-[#0a0a0a]">
+                <iconify-icon icon="solar:widget-linear" stroke-width="1.5" class="text-base text-[#4f46e5]"></iconify-icon>
+                Vue d'ensemble
+              </a>
+              <a href="/professionnel/maintenance-pro" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium tracking-tight text-[#4a4a4a] transition hover:bg-[#fcfcfc] hover:text-[#0a0a0a]">
+                <iconify-icon icon="solar:server-square-cloud-linear" stroke-width="1.5" class="text-base text-[#4f46e5]"></iconify-icon>
+                Maintenance Pro
+              </a>
+              <a href="/professionnel/audit-securite" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium tracking-tight text-[#4a4a4a] transition hover:bg-[#fcfcfc] hover:text-[#0a0a0a]">
+                <iconify-icon icon="solar:bug-linear" stroke-width="1.5" class="text-base text-[#4f46e5]"></iconify-icon>
+                Audit sécurité
+              </a>
+              <a href="/professionnel/creation-site" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium tracking-tight text-[#4a4a4a] transition hover:bg-[#fcfcfc] hover:text-[#0a0a0a]">
+                <iconify-icon icon="solar:pen-new-square-linear" stroke-width="1.5" class="text-base text-[#4f46e5]"></iconify-icon>
+                Création de site
+              </a>
+              <a href="/professionnel/infogerance" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium tracking-tight text-[#4a4a4a] transition hover:bg-[#fcfcfc] hover:text-[#0a0a0a]">
+                <iconify-icon icon="solar:server-linear" stroke-width="1.5" class="text-base text-[#4f46e5]"></iconify-icon>
+                Infogérance
+              </a>
+            </div>
+          </div>
+        </div>
         <a href="/particulier" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium text-[#4a4a4a] transition hover:bg-[#f4f4f5] hover:text-[#0a0a0a]">
           Particulier
         </a>
@@ -51,6 +78,13 @@
   <div id="mobileMenu" class="hidden lg:hidden border-t border-[#eaeaea] bg-white">
     <div class="mx-auto max-w-[90rem] px-4 sm:px-6 py-4 flex flex-col gap-1">
       <a href="/professionnel" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Professionnel</a>
+      <div class="ml-3 flex flex-col gap-0.5 border-l border-[#eaeaea] pl-3">
+        <a href="/professionnel" class="rounded-lg px-3 py-2 text-xs text-[#666] hover:bg-[#f4f4f5] hover:text-[#0a0a0a] transition">Vue d'ensemble</a>
+        <a href="/professionnel/maintenance-pro" class="rounded-lg px-3 py-2 text-xs text-[#666] hover:bg-[#f4f4f5] hover:text-[#0a0a0a] transition">Maintenance Pro</a>
+        <a href="/professionnel/audit-securite" class="rounded-lg px-3 py-2 text-xs text-[#666] hover:bg-[#f4f4f5] hover:text-[#0a0a0a] transition">Audit sécurité</a>
+        <a href="/professionnel/creation-site" class="rounded-lg px-3 py-2 text-xs text-[#666] hover:bg-[#f4f4f5] hover:text-[#0a0a0a] transition">Création de site</a>
+        <a href="/professionnel/infogerance" class="rounded-lg px-3 py-2 text-xs text-[#666] hover:bg-[#f4f4f5] hover:text-[#0a0a0a] transition">Infogérance</a>
+      </div>
       <a href="/particulier" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Particulier</a>
       <a href="/qui-sommes-nous" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Qui sommes-nous</a>
       <a href="tel:+33678565430" class="rounded-xl px-4 py-3 text-sm font-medium text-white bg-[#0a0a0a] hover:bg-[#1a1a1a] transition mt-2">Nous contacter — 06 78 56 54 30</a>
