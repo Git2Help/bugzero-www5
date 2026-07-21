@@ -44,5 +44,24 @@ const { title, description } = Astro.props;
   </main>
 
   <slot name="footer" />
+
+  <script is:inline>
+    (function() {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduceMotion) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        document.querySelectorAll('.scroll-reveal').forEach(el => { revealObserver.observe(el); });
+      } else {
+        document.querySelectorAll('.scroll-reveal').forEach(el => { el.classList.add('revealed'); });
+      }
+    })();
+  </script>
 </body>
 </html>

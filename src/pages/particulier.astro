@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="BUGZERO | Services Particuliers" description="Dépannage informatique pour particuliers à Monaco, Nice et Menton. Intervention rapide, maintenance et formation.">
+<Layout title="BUGZERO | Dépannage informatique particuliers à Monaco, Nice, Menton" description="Dépannage PC à distance en 30 min, sur site à Monaco, Nice et Menton. Récupération de données, virus, formation. 06 78 56 54 30.">
   <fragment slot="header">
     <Header />
   </fragment>
@@ -29,6 +29,7 @@ import Footer from '../components/Footer.astro';
     .text-aura { position: absolute; inset: -20px; background: linear-gradient(90deg, rgba(79,70,229,0.3), rgba(124,58,237,0.3), rgba(37,99,235,0.3)); filter: blur(30px); z-index: -1; opacity: 0; animation: auraReveal 2s 1s ease-out forwards, liquidFlow 4s linear infinite; border-radius: 50%; }
     @keyframes auraReveal { to { opacity: 0.8; } }
   </style>
+
   <!-- 1. Hero -->
   <section class="overflow-hidden lg:pt-36 lg:pb-48 bg-[#fcfcfc] pt-24 pb-32 relative">
     <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
@@ -42,29 +43,29 @@ import Footer from '../components/Footer.astro';
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
           </span>
-          Dépannage rapide à Monaco, Nice &amp; Menton
+          Dépannage à distance en 30 minutes — Monaco, Nice &amp; Menton
         </div>
       </div>
       <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
         <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
-          <span class="block animate-kinetic" style="animation-delay: 200ms;">Votre PC</span>
+          <span class="block animate-kinetic" style="animation-delay: 200ms;">Un écran noir,</span>
           <span class="block animate-kinetic" style="animation-delay: 400ms;">
             <span class="relative inline-block">
-              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">ne marche plus</span>
-              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">ne marche plus</span>
+              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">un virus,</span>
+              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">un virus,</span>
               <span class="text-aura"></span>
             </span>
           </span>
-          <span class="block animate-kinetic" style="animation-delay: 600ms;">On s'en occupe.</span>
+          <span class="block animate-kinetic" style="animation-delay: 600ms;">un ordi qui rame ?</span>
         </h1>
       </div>
       <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
         <p class="text-base leading-relaxed text-[#4a4a4a] sm:text-lg lg:text-xl">
-          Depuis 2015, nous réparons vos ordinateurs, tablettes et smartphones à Monaco, Nice et Menton. Intervention rapide, devis gratuit et travail garanti.
+          On le répare à distance en 30 minutes. Sans vous déplacer, sans stress.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="tel:+33678565430" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
-            Prendre rendez-vous
+            Je veux un dépannage immédiat
             <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
           </a>
         </div>
@@ -72,107 +73,126 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <!-- 2. Dépannage à distance -->
+  <!-- 2. Services -->
   <section class="bg-white border-y border-[#eaeaea]">
-    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-      <div class="grid gap-12 lg:grid-cols-2 items-center">
-        <div class="scroll-reveal">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-6 shadow-sm">
-            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
-            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Dépannage</span>
-          </div>
-          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Dépannage à distance</h2>
-          <p class="text-base text-[#666] leading-relaxed mb-6">Un problème ? Nous nous connectons à votre PC en toute sécurité via une connexion chiffrée. Résolu en ~30 minutes dans la plupart des cas.</p>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Connexion sécurisée et chiffrée</span></li>
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Intervention rapide (~30 minutes)</span></li>
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Prix fixe et transparent</span></li>
-          </ul>
-        </div>
-        <div class="rounded-2xl bg-[#f4f4f5] border border-[#eaeaea] p-12 flex items-center justify-center scroll-reveal" style="transition-delay: 200ms;">
-          <iconify-icon icon="solar:monitor-linear" stroke-width="1.5" class="text-8xl text-[#4f46e5]/30"></iconify-icon>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Dépannage sur site -->
-  <section class="bg-[#fcfcfc]">
-    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-      <div class="grid gap-12 lg:grid-cols-2 items-center">
-        <div class="rounded-2xl bg-[#f4f4f5] border border-[#eaeaea] p-12 flex items-center justify-center scroll-reveal">
-          <iconify-icon icon="solar:map-point-linear" stroke-width="1.5" class="text-8xl text-[#4f46e5]/30"></iconify-icon>
-        </div>
-        <div class="scroll-reveal" style="transition-delay: 200ms;">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-6 shadow-sm">
-            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
-            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Sur Site</span>
-          </div>
-          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Dépannage sur site</h2>
-          <p class="text-base text-[#666] leading-relaxed mb-6">Nous nous déplaçons chez vous à Monaco, Nice et Menton pour résoudre vos problèmes matériels et logiciels. Réparation d'écrans, remplacement de pièces, installation de matériel.</p>
-          <div class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:map-point-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon><span>Zones d'intervention : Monaco, Nice, Menton, Beausoleil, Cap-d'Ail</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Maintenance préventive -->
-  <section class="border-y border-[#eaeaea] bg-white relative overflow-hidden">
-    <div class="absolute left-1/2 top-0 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#4f46e5] to-transparent opacity-50"></div>
     <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
       <div class="text-center mb-16 scroll-reveal">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
           <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
-          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Prévention</span>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Nos services</span>
         </div>
-        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Maintenance préventive</h2>
-        <p class="text-base text-[#666] max-w-lg mx-auto">Gardez votre équipement en bonne santé avec nos forfaits d'entretien réguliers.</p>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">On s'occupe de tout</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Des prestations claires, à prix transparent. Vous savez ce que vous payez.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:monitor-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Dépannage à distance</h3>
+            </div>
+            <span class="text-2xl font-medium tracking-tighter text-[#0a0a0a]">49€<span class="text-xs text-[#666] ml-1 tracking-widest uppercase">HT</span></span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#666] mb-4">Connexion sécurisée, diagnostic et résolution en direct. 30 min max dans la plupart des cas.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Résolu en ~30 minutes</span></li>
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Connexion chiffrée sécurisée</span></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:map-point-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Dépannage sur site</h3>
+            </div>
+            <span class="text-2xl font-medium tracking-tighter text-[#0a0a0a]">89€<span class="text-xs text-[#666] ml-1 tracking-widest uppercase">HT/h</span></span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#666] mb-4">Hardware, panne, virus. On se déplace à Monaco, Nice et Menton.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Monaco, Nice, Menton, Beausoleil</span></li>
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Pièces &amp; installation incluses</span></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:shield-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Maintenance préventive</h3>
+            </div>
+            <span class="text-2xl font-medium tracking-tighter text-[#0a0a0a]">89€<span class="text-xs text-[#666] ml-1 tracking-widest uppercase">HT/h</span></span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#666] mb-4">Nettoyage complet + antivirus + sauvegarde. Votre PC reste rapide et protégé.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Nettoyage logiciel &amp; physique</span></li>
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Sauvegarde automatique</span></li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 300ms;">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:book-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Formation sur mesure</h3>
+            </div>
+            <span class="text-2xl font-medium tracking-tighter text-[#0a0a0a]">dès 89€<span class="text-xs text-[#666] ml-1 tracking-widest uppercase">HT/h</span></span>
+          </div>
+          <p class="text-sm leading-relaxed text-[#666] mb-4">Bureautique, Internet, sauvegarde. À domicile ou en visio, à votre rythme.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Word, Excel, messagerie</span></li>
+            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Patient et pédagogue</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Pourquoi nous choisir -->
+  <section class="bg-[#fcfcfc] relative overflow-hidden">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Pourquoi nous</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Pourquoi nous choisir</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto">Des techniciens patients, des prix clairs, et l'engagement d'un résultat.</p>
       </div>
       <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
         <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
-          <div class="mb-6"><iconify-icon icon="solar:broom-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
-          <h3 class="text-lg font-medium tracking-tight mb-3">Nettoyage</h3>
-          <p class="text-sm leading-relaxed text-[#666]">Nettoyage physique et logiciel complet. Suppression des fichiers temporaires, défragmentation, optimisation des performances.</p>
+          <div class="mb-6"><iconify-icon icon="solar:clock-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Intervention le jour même</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Appelez avant 14h, un technicien passe le jour même. À distance ou à domicile.</p>
         </div>
         <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
-          <div class="mb-6"><iconify-icon icon="solar:shield-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
-          <h3 class="text-lg font-medium tracking-tight mb-3">Antivirus</h3>
-          <p class="text-sm leading-relaxed text-[#666]">Installation et configuration d'antivirus. Protection contre les logiciels malveillants, ransomwares et menaces en ligne.</p>
+          <div class="mb-6"><iconify-icon icon="solar:chat-round-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Techniciens patients</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Des explications claires, sans jargon. Vous comprenez ce qu'on fait et pourquoi.</p>
         </div>
         <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
-          <div class="mb-6"><iconify-icon icon="solar:cloud-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
-          <h3 class="text-lg font-medium tracking-tight mb-3">Sauvegarde</h3>
-          <p class="text-sm leading-relaxed text-[#666]">Mise en place de sauvegarde automatique. Vos photos, documents et données personnelles en sécurité.</p>
+          <div class="mb-6"><iconify-icon icon="solar:hand-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Satisfait ou résolu</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Sans frais supplémentaires tant que le problème n'est pas réglé. Simple et honnête.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Formation -->
-  <section class="bg-[#fcfcfc] relative overflow-hidden">
-    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
-      <div class="grid gap-12 lg:grid-cols-2 items-center">
-        <div class="scroll-reveal">
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-6 shadow-sm">
-            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
-            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Formation</span>
+  <!-- 4. Témoignage -->
+  <section class="z-10 overflow-hidden bg-white w-full max-w-[90rem] border-[#eaeaea] border rounded-[2rem] mt-0 mr-auto mb-24 ml-auto pt-6 pr-6 pb-6 pl-6 relative shadow-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 mt-6 items-center">
+      <div class="lg:col-span-12 relative">
+        <div class="relative bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] shadow-lg">
+          <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
+          <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10 max-w-3xl">"Alex a éliminé toutes les pubs de mon PC en visio. Magique !"</p>
+          <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
+            <div class="w-12 h-12 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:user-circle-linear" stroke-width="1.5" class="text-2xl text-[#4f46e5]"></iconify-icon></div>
+            <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Marc</div><div class="text-xs text-[#666] tracking-tight">Retraité, Monaco</div></div>
           </div>
-          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Formation</h2>
-          <p class="text-base text-[#666] leading-relaxed mb-6">Vous souhaitez maîtriser votre ordinateur ? Nous proposons des formations personnalisées à domicile ou en visio.</p>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Logiciels bureautiques (Word, Excel, etc.)</span></li>
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Traitement de texte et mise en page</span></li>
-            <li class="flex items-center gap-3 text-sm text-[#4a4a4a]"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0"></iconify-icon><span>Logiciels de comptabilité et gestion</span></li>
-          </ul>
-        </div>
-        <div class="rounded-2xl bg-[#f4f4f5] border border-[#eaeaea] p-12 flex items-center justify-center scroll-reveal" style="transition-delay: 200ms;">
-          <iconify-icon icon="solar:book-linear" stroke-width="1.5" class="text-8xl text-[#4f46e5]/30"></iconify-icon>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Contact -->
+  <!-- 5. Contact / CTA final -->
   <section id="contact" class="border-y border-[#eaeaea] bg-white">
     <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
       <div class="text-center mb-16 scroll-reveal">
@@ -180,8 +200,17 @@ import Footer from '../components/Footer.astro';
           <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
           <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Contact</span>
         </div>
-        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Besoin d'aide ?</h2>
-        <p class="text-base text-[#666] max-w-lg mx-auto">Contactez-nous pour un diagnostic gratuit ou une intervention rapide.</p>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Appelez le 06 78 56 54 30</h2>
+        <p class="text-base text-[#666] max-w-lg mx-auto mb-8">Ou prenez rendez-vous en ligne. Diagnostic gratuit, intervention rapide.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+33678565430" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
+            Appeler maintenant
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+          </a>
+          <a href="mailto:bonjour@bugzero.fr" class="rounded-full bg-transparent border border-[#eaeaea] px-8 py-3.5 text-sm font-medium text-[#0a0a0a] transition-colors hover:bg-[#f4f4f5]">
+            Envoyer un email
+          </a>
+        </div>
       </div>
       <div class="grid gap-8 md:grid-cols-3 max-w-4xl mx-auto">
         <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">

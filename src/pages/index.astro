@@ -44,30 +44,30 @@ import Footer from '../components/Footer.astro';
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
           </span>
-          Nouveaux projets acceptés
+          Nouveaux projets acceptés — Diagnostic gratuit
           <svg class="ml-2 h-3.5 w-3.5 text-[#666]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
         </div>
       </div>
       <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
         <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
-          <span class="block animate-kinetic" style="animation-delay: 200ms;">Votre partenaire</span>
+          <span class="block animate-kinetic" style="animation-delay: 200ms;">Votre PC plante,</span>
           <span class="block animate-kinetic" style="animation-delay: 400ms;">
             <span class="relative inline-block">
-              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">informatique</span>
-              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">informatique</span>
+              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">votre entreprise</span>
+              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">votre entreprise</span>
               <span class="text-aura"></span>
             </span>
           </span>
-          <span class="block animate-kinetic" style="animation-delay: 600ms;">à Monaco.</span>
+          <span class="block animate-kinetic" style="animation-delay: 600ms;">à l'arrêt ?</span>
         </h1>
       </div>
       <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
         <p class="text-base leading-relaxed text-[#4a4a4a] sm:text-lg lg:text-xl">
-          BUGZERO vous accompagne dans tous vos projets IT : maintenance, cybersécurité, développement web et assistance personnalisée pour les professionnels et particuliers.
+          Bugzero intervient en 30 minutes. Diagnostic gratuit, solutions immédiates.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="/professionnel" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
-            Nos services
+          <a href="mailto:bonjour@bugzero.fr" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
+            Je règle mon problème maintenant
             <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
           </a>
         </div>
@@ -124,9 +124,9 @@ import Footer from '../components/Footer.astro';
         </a>
       </div>
       <div class="grid gap-6 md:grid-cols-3">
-        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+        <a href="/particulier" class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
           <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
-            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e44ec1fe-2eb5-4aee-917b-f31f10e9f350/1600w.jpg" alt="Maintenance" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e44ec1fe-2eb5-4aee-917b-f31f10e9f350/1600w.jpg" alt="Particuliers" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
               <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
@@ -134,15 +134,15 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="p-6">
             <div class="mb-3 flex items-center gap-2">
-              <iconify-icon icon="solar:pen-new-square-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
-              <h3 class="text-lg font-medium tracking-tight">Maintenance IT</h3>
+              <iconify-icon icon="solar:users-family-rounded-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Particuliers</h3>
             </div>
-            <p class="text-sm leading-relaxed text-[#666]">Forfaits de maintenance adaptés à vos besoins, de 199€ à 1299€ par mois. Support réactif et suivi personnalisé.</p>
+            <p class="text-sm leading-relaxed text-[#666]">Dépannage express, installation, conseils. On s'occupe de tout, à distance ou à domicile.</p>
           </div>
-        </article>
-        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+        </a>
+        <a href="/professionnel" class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
           <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
-            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e414d578-afd1-4518-9e6f-71869b5d327a/1600w.jpg" alt="Cybersécurité" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/variants/e414d578-afd1-4518-9e6f-71869b5d327a/1600w.jpg" alt="Professionnels" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
               <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
@@ -150,15 +150,15 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="p-6">
             <div class="mb-3 flex items-center gap-2">
-              <iconify-icon icon="solar:devices-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
-              <h3 class="text-lg font-medium tracking-tight">Cybersécurité</h3>
+              <iconify-icon icon="solar:briefcase-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Professionnels</h3>
             </div>
-            <p class="text-sm leading-relaxed text-[#666]">Tests d'intrusion, solutions Bitdefender, conformité RGPD et NIS2. Protégez votre entreprise des menaces numériques.</p>
+            <p class="text-sm leading-relaxed text-[#666]">Infogérance, cybersécurité, visibilité web. Votre service IT clé-en-main, sans engagement.</p>
           </div>
-        </article>
-        <article class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 300ms;">
+        </a>
+        <a href="/professionnel/creation-site" class="group relative overflow-hidden rounded-2xl bg-white border border-[#eaeaea] p-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 300ms;">
           <div class="relative overflow-hidden rounded-xl bg-[#f4f4f5]">
-            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f8f2e308-3a78-44ba-ad9b-3f23f5863b94_1600w.webp" alt="Visibilité Web" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f8f2e308-3a78-44ba-ad9b-3f23f5863b94_1600w.webp" alt="Fonds Bleu Monaco" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[30%] group-hover:grayscale-0">
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
             <div class="absolute bottom-4 left-4 flex h-10 w-10 translate-y-4 items-center justify-center rounded-full bg-white text-[#0a0a0a] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
               <iconify-icon icon="solar:arrow-right-up-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
@@ -166,12 +166,12 @@ import Footer from '../components/Footer.astro';
           </div>
           <div class="p-6">
             <div class="mb-3 flex items-center gap-2">
-              <iconify-icon icon="solar:magic-stick-3-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
-              <h3 class="text-lg font-medium tracking-tight">Visibilité Web</h3>
+              <iconify-icon icon="solar:hand-money-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+              <h3 class="text-lg font-medium tracking-tight">Fonds Bleu (Monaco)</h3>
             </div>
-            <p class="text-sm leading-relaxed text-[#666]">Création de sites, SEO, SEA et Fonds Bleu 30-70%. Propulsez votre présence en ligne avec des solutions sur mesure.</p>
+            <p class="text-sm leading-relaxed text-[#666]">Jusqu'à 70% de subventions pour votre site, SEO, appli. On monte le dossier gratuitement.</p>
           </div>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -182,19 +182,19 @@ import Footer from '../components/Footer.astro';
     <div class="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-4 divide-x divide-[#eaeaea]/50">
         <div class="text-center scroll-reveal">
-          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="150">0</span>+</p>
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="800">0</span>+</p>
           <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Clients Satisfaits</p>
         </div>
         <div class="text-center scroll-reveal" style="transition-delay: 100ms;">
-          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="10">0</span>+</p>
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="15">0</span>+</p>
           <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Années d'Expérience</p>
         </div>
         <div class="text-center scroll-reveal" style="transition-delay: 200ms;">
-          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="500">0</span>+</p>
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="800">0</span>+</p>
           <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Interventions Réalisées</p>
         </div>
         <div class="text-center scroll-reveal" style="transition-delay: 300ms;">
-          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="99">0</span>%</p>
+          <p class="text-[clamp(2.5rem,4vw,3.5rem)] font-medium tracking-tighter text-[#0a0a0a]"><span class="counter" data-target="98">0</span>%</p>
           <p class="mt-2 text-xs font-medium uppercase tracking-widest text-[#888]">Taux de Satisfaction</p>
         </div>
       </div>
@@ -215,10 +215,10 @@ import Footer from '../components/Footer.astro';
           <div class="flex gap-6 overflow-x-auto scroll-smooth pr-6 pl-6 absolute top-0 right-0 bottom-0 left-0 items-center snap-x snap-mandatory pb-4" style="scrollbar-width: none; -ms-overflow-style: none;" id="testimonial-rail">
             <article class="min-w-[85vw] md:min-w-[420px] sm:min-w-[520px] max-w-[640px] bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] transition-shadow hover:shadow-xl hover:shadow-black/5 snap-center -rotate-2 shadow-lg relative mt-4">
               <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
-              <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10">"HBC a complètement transformé notre infrastructure IT. Leur réactivité et leur professionnalisme sont remarquables."</p>
+              <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10">"Frédéric a récupéré tous mes fichiers en 45 minutes. Incroyable réactivité !"</p>
               <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0413dc82-d7c0-447d-aaa9-87ce398bca83_320w.webp" alt="Client" class="w-12 h-12 rounded-full object-cover grayscale">
-                <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Sophie Martin</div><div class="text-xs text-[#666] tracking-tight">Directrice, Cabinet Médical</div></div>
+                <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Sophie</div><div class="text-xs text-[#666] tracking-tight">Particulière, Nice</div></div>
               </div>
             </article>
             <article class="min-w-[85vw] md:min-w-[420px] sm:min-w-[520px] max-w-[640px] bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] transition-shadow hover:shadow-xl hover:shadow-black/5 snap-center rotate-1 shadow-lg relative mt-4">
@@ -284,10 +284,10 @@ import Footer from '../components/Footer.astro';
         <div class="lg:col-span-5 lg:sticky lg:top-32 self-start scroll-reveal">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#eaeaea] mb-8 shadow-sm">
             <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span></span>
-            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Notre Approche</span>
+            <span class="text-xs font-medium uppercase tracking-widest text-[#666]">Pourquoi Bugzero</span>
           </div>
-          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Comment nous<br>accompagnons<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4f46e5] to-[#2563eb]">votre transformation.</span></h2>
-          <p class="text-base text-[#666] leading-relaxed max-w-sm">De l'audit à la mise en production, nous structurons chaque projet pour garantir des résultats concrets et durables.</p>
+          <h2 class="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[0.95] tracking-tighter text-[#0a0a0a] mb-6">Pourquoi nos clients<br>nous<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4f46e5] to-[#2563eb]">recommandent.</span></h2>
+          <p class="text-base text-[#666] leading-relaxed max-w-sm">15 ans d'expertise, une réactivité sans égale et des partenaires de confiance. Voilà ce qui fait la différence Bugzero.</p>
         </div>
         <div class="lg:col-span-7 mt-8 lg:mt-0">
           <div class="border-t-2 border-[#0a0a0a]">
@@ -295,7 +295,7 @@ import Footer from '../components/Footer.astro';
               <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
                 <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#eef2ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">01</span>
                 <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
-                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#4f46e5] transition-colors duration-300">Audit &amp; Conseil</span>
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#4f46e5] transition-colors duration-300">15 ans d'expertise</span>
                 </div>
                 <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#4f46e5] group-hover:rotate-90 shrink-0"></iconify-icon>
               </button>
@@ -305,21 +305,21 @@ import Footer from '../components/Footer.astro';
                     <div class="absolute -top-32 -right-32 w-80 h-80 bg-[#4f46e5] rounded-full blur-[100px] opacity-30 pointer-events-none"></div>
                     <div class="grid md:grid-cols-5 gap-10 relative z-10">
                       <div class="md:col-span-3">
-                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Nous analysons</span> votre infrastructure existante, vos besoins et vos objectifs pour définir une feuille de route claire et priorisée.</p>
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Depuis 2015</span>, Bugzero (Helperiance) accompagne les particuliers et entreprises de Monaco, Nice et Menton. Une équipe locale qui connaît votre terrain.</p>
                       </div>
                       <div class="md:col-span-2">
                         <ul class="flex flex-col gap-3">
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Audit d'infrastructure
+                            Basés à Monaco
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Analyse de sécurité
+                            Nice &amp; Menton couverts
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#4f46e5] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Feuille de route
+                            Équipe certifiée
                           </li>
                         </ul>
                       </div>
@@ -332,7 +332,7 @@ import Footer from '../components/Footer.astro';
               <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
                 <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#f3e8ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">02</span>
                 <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
-                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#7c3aed] transition-colors duration-300">Mise en œuvre</span>
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#7c3aed] transition-colors duration-300">Intervention en moins de 2h</span>
                 </div>
                 <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#7c3aed] group-hover:rotate-90 shrink-0"></iconify-icon>
               </button>
@@ -342,21 +342,21 @@ import Footer from '../components/Footer.astro';
                     <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-[#7c3aed] rounded-full blur-[100px] opacity-25 pointer-events-none"></div>
                     <div class="grid md:grid-cols-5 gap-10 relative z-10">
                       <div class="md:col-span-3">
-                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Des solutions concrètes.</span> Nous déployons les infrastructures, sécurisons les systèmes et développons les outils adaptés à chaque besoin.</p>
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Appelez avant 14h</span>, un technicien intervient le jour même. À distance ou sur site, on résout votre problème sans attendre.</p>
                       </div>
                       <div class="md:col-span-2">
                         <ul class="flex flex-col gap-3">
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Déploiement &amp; Installation
+                            Dépannage à distance en 30 min
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Sécurisation des systèmes
+                            Intervention sur site
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#7c3aed] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Développement sur mesure
+                            Diagnostic gratuit
                           </li>
                         </ul>
                       </div>
@@ -369,7 +369,7 @@ import Footer from '../components/Footer.astro';
               <button class="accordion-trigger flex w-full items-center justify-between py-10 md:py-14 text-left transition-colors relative overflow-hidden">
                 <span class="absolute left-[-10px] top-1/2 -translate-y-1/2 text-[8rem] md:text-[12rem] font-semibold text-[#f4f4f5] group-hover:text-[#eff6ff] transition-all duration-700 pointer-events-none select-none z-0 group-hover:translate-x-6 opacity-50">03</span>
                 <div class="flex items-center gap-8 relative z-10 pl-2 md:pl-8">
-                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#2563eb] transition-colors duration-300">Support &amp; Maintenance</span>
+                  <span class="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#0a0a0a] group-hover:text-[#2563eb] transition-colors duration-300">800+ dépannages réussis</span>
                 </div>
                 <iconify-icon icon="solar:add-circle-linear" stroke-width="1.5" class="text-4xl text-[#a0a0a0] transition-all duration-500 trigger-icon relative z-10 group-hover:text-[#2563eb] group-hover:rotate-90 shrink-0"></iconify-icon>
               </button>
@@ -379,21 +379,21 @@ import Footer from '../components/Footer.astro';
                     <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#2563eb] rounded-full blur-[120px] opacity-25 pointer-events-none"></div>
                     <div class="grid md:grid-cols-5 gap-10 relative z-10">
                       <div class="md:col-span-3">
-                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">Un accompagnement continu.</span> Nous assurons la maintenance, les mises à jour et le support technique pour que votre système reste performant.</p>
+                        <p class="text-base md:text-lg leading-relaxed text-[#a0a0a0]"><span class="text-white font-medium">98% de satisfaction.</span> Plus de 800 clients nous font confiance. Et nous nous appuyons sur des partenaires officiels pour garantir la qualité.</p>
                       </div>
                       <div class="md:col-span-2">
                         <ul class="flex flex-col gap-3">
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Support réactif
+                            Partenaire Monaco Cloud
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Maintenance préventive
+                            Revendeur Dell
                           </li>
                           <li class="flex items-center gap-3 text-sm font-medium text-white/90 bg-white/[0.03] border border-white/10 rounded-xl px-5 py-3 w-full backdrop-blur-sm transition-all hover:bg-white/10 hover:-translate-y-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle text-[#2563eb] shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-                            Sauvegarde cloud
+                            Partenaire Bitdefender
                           </li>
                         </ul>
                       </div>
@@ -545,15 +545,6 @@ import Footer from '../components/Footer.astro';
 <script is:inline>
   // Reduced motion check
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // Mobile Menu Toggle
-  const mobileMenuButton = document.getElementById('mobileMenuButton');
-  if (mobileMenuButton) {
-    mobileMenuButton.addEventListener('click', () => {
-      const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
-    });
-  }
 
   // Scroll Reveal Animation Observer
   if (!reduceMotion) {

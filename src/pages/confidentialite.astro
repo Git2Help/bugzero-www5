@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="BUGZERO | Politique de confidentialité" description="Politique de confidentialité Bugzero (RGPD). Données collectées, finalité, base légale, destinataires, durée de conservation et vos droits.">
+  <fragment slot="header">
+    <Header />
+  </fragment>
+
+  <!-- Hero -->
+  <section class="overflow-hidden lg:pt-36 lg:pb-24 bg-[#fcfcfc] pt-24 pb-20 relative">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.10)_0%,transparent_60%)] blur-[100px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fcfcfc]/30 via-[#fcfcfc]/80 to-[#fcfcfc]"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div class="scroll-reveal revealed" style="transition-delay: 100ms;">
+        <div class="mb-8 inline-flex items-center rounded-full border border-[#e5e5e5] bg-white/60 px-4 py-1.5 text-xs font-medium text-[#171717] shadow-sm backdrop-blur-md">
+          <span class="relative flex h-2 w-2 mr-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
+          </span>
+          RGPD — Conformité
+        </div>
+      </div>
+      <h1 class="text-[clamp(3rem,7vw,6rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] text-center">Politique de confidentialité</h1>
+    </div>
+  </section>
+
+  <!-- Contenu -->
+  <section class="bg-white border-y border-[#eaeaea]">
+    <div class="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <p class="text-sm text-[#666] leading-relaxed mb-12 scroll-reveal">Bugzero (Helperiance) s'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD). La présente politique décrit comment nous collectons, traitons et protégeons vos informations.</p>
+
+      <div class="space-y-12">
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:database-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Données collectées &amp; finalité</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-3">
+            <p>Nous collectons les données nécessaires à la fourniture de nos services :</p>
+            <ul class="space-y-2 pl-1">
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span><span class="font-medium text-[#0a0a0a]">Identité &amp; coordonnées</span> (nom, email, téléphone) pour répondre à vos demandes de contact et de devis. Base légale : consentement et intérêt légitime.</span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span><span class="font-medium text-[#0a0a0a]">Données techniques</span> (parc informatique, configurations) pour la prestation de maintenance et d'infogérance. Base légale : exécution du contrat.</span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span><span class="font-medium text-[#0a0a0a]">Données de navigation</span> (cookies, statistiques anonymisées) pour améliorer le site. Base légale : consentement.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:share-forward-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Destinataires</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed">
+            <p>Vos données sont destinées exclusivement aux services internes de Bugzero / Helperiance et à nos prestataires techniques (hébergeur, outils de sauvegarde) agissant en qualité de sous-traitants. Elles ne font l'objet d'aucune cession ou revente à des tiers.</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:clock-circle-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Durée de conservation</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed">
+            <p>Vos données sont conservées le temps nécessaire à la fourniture du service, augmenté des durées légales d'archivage (notamment comptables et fiscales). Au-delà, elles sont supprimées ou anonymisées.</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:hand-stars-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Vos droits</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-2">
+            <p>Conformément au RGPD, vous disposez des droits suivants sur vos données :</p>
+            <ul class="space-y-2 pl-1">
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span>Droit d'<span class="font-medium text-[#0a0a0a]">accès</span></span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span>Droit de <span class="font-medium text-[#0a0a0a]">rectification</span></span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span>Droit à l'<span class="font-medium text-[#0a0a0a]">effacement</span> (« droit à l'oubli »)</span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span>Droit à la <span class="font-medium text-[#0a0a0a]">limitation</span> et à la <span class="font-medium text-[#0a0a0a]">portabilité</span></span></li>
+              <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-[#4f46e5] text-base shrink-0 mt-0.5"></iconify-icon><span>Droit d'<span class="font-medium text-[#0a0a0a]">opposition</span></span></li>
+            </ul>
+            <p class="pt-2">Vous pouvez exercer ces droits à tout moment. Vous avez également le droit d'introduire une réclamation auprès de l'autorité de contrôle (CNIL en France, Commission de contrôle des informations nominatives à Monaco).</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:letter-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Contact DPO</h2>
+          </div>
+          <div class="rounded-2xl bg-gradient-to-br from-[#0a0a0a] to-[#141414] p-6 text-sm text-white/90 leading-relaxed border border-white/5 relative overflow-hidden">
+            <div class="absolute -top-16 -right-16 w-40 h-40 bg-[#4f46e5] rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
+            <p class="relative z-10 mb-2">Pour toute question relative à vos données personnelles, contactez notre délégué :</p>
+            <a href="mailto:bonjour@bugzero.fr" class="relative z-10 inline-flex items-center gap-2 text-[#a5b4fc] font-medium hover:text-white transition">
+              bonjour@bugzero.fr
+              <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"></iconify-icon>
+            </a>
+            <p class="relative z-10 mt-3 text-white/60">Bugzero — 9, Allée Lazare Sauvaigo, 98000 Monaco — 06 78 56 54 30</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer">
+    <Footer />
+  </fragment>
+</Layout>

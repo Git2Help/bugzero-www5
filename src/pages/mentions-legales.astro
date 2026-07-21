@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="BUGZERO | Mentions légales" description="Mentions légales du site Bugzero, édité par Helperiance. Éditeur, responsable de publication, hébergeur et propriété intellectuelle.">
+  <fragment slot="header">
+    <Header />
+  </fragment>
+
+  <!-- Hero -->
+  <section class="overflow-hidden lg:pt-36 lg:pb-24 bg-[#fcfcfc] pt-24 pb-20 relative">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.10)_0%,transparent_60%)] blur-[100px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fcfcfc]/30 via-[#fcfcfc]/80 to-[#fcfcfc]"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div class="scroll-reveal revealed" style="transition-delay: 100ms;">
+        <div class="mb-8 inline-flex items-center rounded-full border border-[#e5e5e5] bg-white/60 px-4 py-1.5 text-xs font-medium text-[#171717] shadow-sm backdrop-blur-md">
+          <span class="relative flex h-2 w-2 mr-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
+          </span>
+          Informations légales
+        </div>
+      </div>
+      <h1 class="text-[clamp(3rem,7vw,6rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] text-center">Mentions légales</h1>
+    </div>
+  </section>
+
+  <!-- Contenu -->
+  <section class="bg-white border-y border-[#eaeaea]">
+    <div class="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="space-y-12">
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:buildings-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Éditeur du site</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-1">
+            <p><span class="font-medium text-[#0a0a0a]">Helperiance / Bugzero</span></p>
+            <p>9 Allée Lazare Sauvaigo, 98000 Monaco</p>
+            <p>SIRET disponible sur demande</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:user-id-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Responsable de publication</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-1">
+            <p><span class="font-medium text-[#0a0a0a]">Johan Chauvet</span></p>
+            <p>CEO d'Helperiance</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:letter-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Contact</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-1">
+            <p>Email : <a href="mailto:bonjour@bugzero.fr" class="text-[#4f46e5] underline underline-offset-4 hover:text-[#7c3aed] transition">bonjour@bugzero.fr</a></p>
+            <p>Téléphone : <a href="tel:+33678565430" class="text-[#4f46e5] underline underline-offset-4 hover:text-[#7c3aed] transition">06 78 56 54 30</a></p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:server-cloud-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Hébergement</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed space-y-1">
+            <p><span class="font-medium text-[#0a0a0a]">Cloudflare Pages</span></p>
+            <p>Cloudflare, Inc.</p>
+            <p>101 Townsend Street, San Francisco, CA 94107, États-Unis</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:shield-keyhole-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Propriété intellectuelle</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed">
+            <p>L'ensemble des contenus présents sur ce site (textes, logos, graphismes, charte graphique, structure) est la propriété exclusive d'Helperiance / Bugzero et est protégé par les lois en vigueur sur la propriété intellectuelle. Tous droits réservés. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable, est interdite.</p>
+          </div>
+        </div>
+
+        <div class="scroll-reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <iconify-icon icon="solar:shield-warning-linear" stroke-width="1.5" class="text-xl text-[#4f46e5]"></iconify-icon>
+            <h2 class="text-xl font-medium tracking-tight text-[#0a0a0a]">Responsabilité</h2>
+          </div>
+          <div class="rounded-2xl bg-[#fcfcfc] border border-[#eaeaea] p-6 text-sm text-[#4a4a4a] leading-relaxed">
+            <p>Les informations diffusées sur ce site sont présentées à titre indicatif et général sans valeur contractuelle. Bugzero s'efforce d'assurer l'exactitude et la mise à jour des informations, mais ne saurait être tenue responsable des éventuelles erreurs ou omissions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer">
+    <Footer />
+  </fragment>
+</Layout>

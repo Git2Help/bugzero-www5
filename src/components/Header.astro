@@ -1,5 +1,4 @@
 ---
----
 
 <!-- Top Banner -->
 <div class="w-full bg-[#0a0a0a] text-white overflow-hidden relative">
@@ -27,11 +26,14 @@
         <a href="/particulier" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium text-[#4a4a4a] transition hover:bg-[#f4f4f5] hover:text-[#0a0a0a]">
           Particulier
         </a>
+        <a href="/qui-sommes-nous" class="flex min-h-11 items-center rounded-full px-4 text-sm font-medium text-[#4a4a4a] transition hover:bg-[#f4f4f5] hover:text-[#0a0a0a]">
+          Qui sommes-nous
+        </a>
       </div>
     </div>
 
     <div class="hidden items-center gap-4 lg:flex">
-      <a href="#contact" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0a0a0a] px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a]">
+      <a href="tel:+33678565430" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-[#0a0a0a] px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a]">
         <span class="relative z-10">Nous contacter</span>
         <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-[#4f46e5] to-[#7c3aed] transition-transform duration-500 ease-out group-hover:translate-x-0"></div>
         <span class="relative z-10 ml-2 block transition-transform duration-300 group-hover:translate-x-1">
@@ -44,4 +46,28 @@
       <iconify-icon icon="solar:hamburger-menu-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
     </button>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-[#eaeaea] bg-white">
+    <div class="mx-auto max-w-[90rem] px-4 sm:px-6 py-4 flex flex-col gap-1">
+      <a href="/professionnel" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Professionnel</a>
+      <a href="/particulier" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Particulier</a>
+      <a href="/qui-sommes-nous" class="rounded-xl px-4 py-3 text-sm font-medium text-[#4a4a4a] hover:bg-[#f4f4f5] transition">Qui sommes-nous</a>
+      <a href="tel:+33678565430" class="rounded-xl px-4 py-3 text-sm font-medium text-white bg-[#0a0a0a] hover:bg-[#1a1a1a] transition mt-2">Nous contacter — 06 78 56 54 30</a>
+    </div>
+  </div>
 </header>
+
+<script is:inline>
+  (function() {
+    const btn = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
+      });
+    }
+  })();
+</script>

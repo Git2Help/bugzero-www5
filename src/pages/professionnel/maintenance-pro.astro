@@ -1,0 +1,211 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="BUGZERO | Maintenance IT professionnelle — dès 59€ HT/mois, Monaco" description="Surveillance 24/7, antivirus, sauvegardes et support inclus. Service IT dédié dès 59€ HT/mois, sans le salaire. Pour TPE/PME à Monaco et PACA.">
+  <fragment slot="header">
+    <Header />
+  </fragment>
+
+  <style>
+    @keyframes kineticReveal {
+      0% { opacity: 0; transform: translateZ(-800px) translateY(80px) rotateX(30deg) scale(0.8); filter: blur(12px); letter-spacing: -0.1em; }
+      60% { opacity: 1; transform: translateZ(50px) translateY(-10px) rotateX(-5deg) scale(1.02); filter: blur(0px); letter-spacing: -0.04em; }
+      100% { opacity: 1; transform: translateZ(0) translateY(0) rotateX(0deg) scale(1); filter: blur(0px); letter-spacing: -0.05em; }
+    }
+    @keyframes liquidFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes chromaticOffset {
+      0% { transform: translate(-3px, -2px) scale(1.01); filter: hue-rotate(0deg) blur(2px); }
+      100% { transform: translate(3px, 2px) scale(1.01); filter: hue-rotate(45deg) blur(3px); }
+    }
+    .animate-kinetic { animation: kineticReveal 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards; opacity: 0; transform-style: preserve-3d; display: inline-block; will-change: transform, opacity, filter; }
+    .text-liquid { background: linear-gradient(110deg, #050505 0%, #4f46e5 25%, #7c3aed 50%, #2563eb 75%, #050505 100%); background-size: 200% auto; color: transparent; -webkit-background-clip: text; background-clip: text; animation: liquidFlow 4s linear infinite; }
+    .text-aura { position: absolute; inset: -20px; background: linear-gradient(90deg, rgba(79,70,229,0.3), rgba(124,58,237,0.3), rgba(37,99,235,0.3)); filter: blur(30px); z-index: -1; opacity: 0; animation: auraReveal 2s 1s ease-out forwards, liquidFlow 4s linear infinite; border-radius: 50%; }
+    @keyframes auraReveal { to { opacity: 0.8; } }
+  </style>
+
+  <!-- Hero -->
+  <section class="overflow-hidden lg:pt-36 lg:pb-48 bg-[#fcfcfc] pt-24 pb-32 relative">
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden flex justify-center">
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vw] rounded-full bg-[radial-gradient(circle_at_center,rgba(79,70,229,0.12)_0%,transparent_60%)] blur-[100px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-[#fcfcfc]/30 via-[#fcfcfc]/80 to-[#fcfcfc]"></div>
+    </div>
+    <div class="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div class="scroll-reveal revealed" style="transition-delay: 100ms;">
+        <div class="mb-8 inline-flex items-center rounded-full border border-[#e5e5e5] bg-white/60 px-4 py-1.5 text-xs font-medium text-[#171717] shadow-sm backdrop-blur-md">
+          <span class="relative flex h-2 w-2 mr-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4f46e5] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#4f46e5]"></span>
+          </span>
+          Sans engagement — dès 59€ HT/mois
+        </div>
+      </div>
+      <div style="perspective: 1200px;" class="max-w-5xl mt-2 mb-2">
+        <h1 class="text-[clamp(3.5rem,8vw,8.5rem)] font-medium leading-[0.95] tracking-tighter text-[#050505] flex flex-col items-center" style="transform-style: preserve-3d;">
+          <span class="block animate-kinetic" style="animation-delay: 200ms;">Service IT dédié,</span>
+          <span class="block animate-kinetic" style="animation-delay: 400ms;">
+            <span class="relative inline-block">
+              <span class="text-liquid inline-block pb-1 pr-2 relative z-10">sans le salaire.</span>
+              <span class="absolute inset-0 text-liquid pb-1 pr-2 z-0 mix-blend-multiply opacity-60" style="animation: liquidFlow 4s linear infinite, chromaticOffset 3s ease-in-out infinite alternate;">sans le salaire.</span>
+              <span class="text-aura"></span>
+            </span>
+          </span>
+        </h1>
+      </div>
+      <div class="mt-8 max-w-2xl scroll-reveal revealed" style="transition-delay: 800ms;">
+        <p class="text-base leading-relaxed text-[#4a4a4a] sm:text-lg lg:text-xl">
+          Surveillance 24/7, antivirus, sauvegardes et support inclus. Dès 59€ HT/mois.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#formules" class="group flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#0a0a0a] px-8 py-3.5 text-sm font-medium text-white transition-all hover:bg-[#1a1a1a] hover:shadow-xl hover:shadow-black/10 hover:-translate-y-0.5">
+            Comparer les formules
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tableau comparatif -->
+  <section id="formules" class="bg-white border-y border-[#eaeaea]">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Formules</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Comparez et choisissez</h2>
+        <p class="text-base text-[#666] max-w-md mx-auto">Quatre formules, sans engagement. Vous changez quand vous voulez.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="mb-6"><iconify-icon icon="solar:server-square-cloud-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-1">Supervision-Assistance</h3>
+          <p class="text-xs text-[#888] mb-4 tracking-wide">L'essentiel pour démarrer</p>
+          <div class="flex items-end gap-1 mb-4"><span class="text-4xl tracking-tighter text-[#0a0a0a] font-medium">59€</span><span class="text-xs text-[#666] mb-1.5 tracking-widest uppercase">HT/mois</span></div>
+          <p class="text-sm leading-relaxed text-[#666] mb-6 flex-grow">Supervision automatique, antivirus Bitdefender, sauvegarde MSP360.</p>
+          <a href="mailto:bonjour@bugzero.fr" class="mt-auto w-full py-3 px-4 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-[#f4f4f5] bg-white border border-[#eaeaea] shadow-sm">
+            <span class="text-xs text-[#0a0a0a] tracking-widest uppercase font-semibold">Choisir</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-[#4f46e5] text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="mb-6"><iconify-icon icon="solar:headphones-round-sound-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-1">Liberté</h3>
+          <p class="text-xs text-[#888] mb-4 tracking-wide">Un pas vers la tranquillité</p>
+          <div class="flex items-end gap-1 mb-4"><span class="text-4xl tracking-tighter text-[#0a0a0a] font-medium">79€</span><span class="text-xs text-[#666] mb-1.5 tracking-widest uppercase">HT/mois</span></div>
+          <p class="text-sm leading-relaxed text-[#666] mb-6 flex-grow">+1 appel par mois, 6 tickets, assistance à distance.</p>
+          <a href="mailto:bonjour@bugzero.fr" class="mt-auto w-full py-3 px-4 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-[#f4f4f5] bg-white border border-[#eaeaea] shadow-sm">
+            <span class="text-xs text-[#0a0a0a] tracking-widest uppercase font-semibold">Choisir</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-[#4f46e5] text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+        </div>
+        <div class="rounded-2xl bg-gradient-to-br from-[#0a0a0a] to-[#141414] border border-white/10 p-8 flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/20 hover:-translate-y-1 scroll-reveal relative overflow-hidden" style="transition-delay: 200ms;">
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-[#4f46e5] rounded-full blur-[60px] opacity-20 pointer-events-none"></div>
+          <div class="absolute top-6 right-6 flex items-center gap-1.5 text-[#a5b4fc] font-medium text-xs"><iconify-icon icon="solar:star-bold" class="text-sm"></iconify-icon><span class="tracking-tight uppercase">Populaire</span></div>
+          <div class="mb-6"><iconify-icon icon="solar:rocket-2-linear" stroke-width="1.5" class="text-3xl text-[#a5b4fc]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-1 text-white">Puissance</h3>
+          <p class="text-xs text-white/40 mb-4 tracking-wide">Pour les équipes actives</p>
+          <div class="flex items-end gap-1 mb-4"><span class="text-4xl tracking-tighter text-white font-medium">149€</span><span class="text-xs text-white/50 mb-1.5 tracking-widest uppercase">HT/mois</span></div>
+          <p class="text-sm leading-relaxed text-[#a0a0a0] mb-6 flex-grow">+3 appels, 3h sur site à Monaco et PACA.</p>
+          <a href="mailto:bonjour@bugzero.fr" class="mt-auto w-full py-3 px-4 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-white/10 bg-[#1a1a1a] border border-white/10 shadow-sm">
+            <span class="text-xs text-white tracking-widest uppercase font-semibold">Choisir</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-white text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 flex flex-col transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 300ms;">
+          <div class="mb-6"><iconify-icon icon="solar:medal-ribbon-star-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-1">Illimitée</h3>
+          <p class="text-xs text-[#888] mb-4 tracking-wide">La totale sérénité</p>
+          <div class="flex items-end gap-1 mb-4"><span class="text-4xl tracking-tighter text-[#0a0a0a] font-medium">249€</span><span class="text-xs text-[#666] mb-1.5 tracking-widest uppercase">HT/mois</span></div>
+          <p class="text-sm leading-relaxed text-[#666] mb-6 flex-grow">Appels illimités, 1 journée de présence sur site par mois.</p>
+          <a href="mailto:bonjour@bugzero.fr" class="mt-auto w-full py-3 px-4 rounded-xl flex items-center justify-between group/btn transition-all duration-300 hover:bg-[#f4f4f5] bg-white border border-[#eaeaea] shadow-sm">
+            <span class="text-xs text-[#0a0a0a] tracking-widest uppercase font-semibold">Choisir</span>
+            <iconify-icon icon="solar:alt-arrow-right-linear" class="text-[#4f46e5] text-lg group-hover/btn:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi choisir Bugzero -->
+  <section class="bg-[#fcfcfc] relative overflow-hidden">
+    <div class="mx-auto max-w-[90rem] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+      <div class="text-center mb-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-[#eaeaea] mb-6 backdrop-blur-md shadow-sm">
+          <div class="w-1.5 h-1.5 rounded-full bg-[#4f46e5] animate-pulse"></div>
+          <span class="text-xs text-[#666] tracking-widest uppercase font-medium">Avantages</span>
+        </div>
+        <h2 class="text-[clamp(2.4rem,4.5vw,5rem)] font-medium leading-[1] tracking-tighter mb-4 text-[#0a0a0a]">Pourquoi choisir Bugzero</h2>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 max-w-4xl mx-auto">
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal">
+          <div class="mb-6"><iconify-icon icon="solar:clock-circle-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Réponse en moins de 2h</h3>
+          <p class="text-sm leading-relaxed text-[#666]">En heures ouvrées, un technicien vous répond rapidement.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 100ms;">
+          <div class="mb-6"><iconify-icon icon="solar:shield-check-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Antivirus nouvelle génération</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Anti-ransomware, protection multi-points pour tous vos postes.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-[#eaeaea] p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-[#4f46e5]/5 hover:-translate-y-1 scroll-reveal" style="transition-delay: 200ms;">
+          <div class="mb-6"><iconify-icon icon="solar:cloud-linear" stroke-width="1.5" class="text-3xl text-[#4f46e5]"></iconify-icon></div>
+          <h3 class="text-lg font-medium tracking-tight mb-3">Sauvegardes cloud automatiques</h3>
+          <p class="text-sm leading-relaxed text-[#666]">Restaurables en un clic, vos données sont toujours à l'abri.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignage -->
+  <section class="z-10 overflow-hidden bg-white w-full max-w-[90rem] border-[#eaeaea] border rounded-[2rem] mt-0 mr-auto mb-24 ml-auto pt-6 pr-6 pb-6 pl-6 relative shadow-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 mt-6 items-center">
+      <div class="lg:col-span-12 relative">
+        <div class="relative bg-white border border-[#eaeaea] rounded-[24px] p-8 md:p-12 text-[#0a0a0a] shadow-lg">
+          <svg class="w-10 h-10 text-[#4f46e5]/20 mb-6 absolute top-8 right-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 17h3l2-4V7h-6v6h3M6 17h3l2-4V7H5v6h3"></path></svg>
+          <p class="text-xl md:text-2xl text-[#0a0a0a] font-normal tracking-tight leading-tight mb-10 max-w-3xl">"Depuis que Bugzero gère notre maintenance, on n'a plus jamais perdu un fichier."</p>
+          <div class="mt-8 flex items-center gap-4 pt-6 border-t border-[#eaeaea]">
+            <div class="w-12 h-12 rounded-full bg-[#f4f4f5] flex items-center justify-center"><iconify-icon icon="solar:calculator-minimalistic-linear" stroke-width="1.5" class="text-2xl text-[#4f46e5]"></iconify-icon></div>
+            <div><div class="text-sm font-normal tracking-tight text-[#0a0a0a]">Cabinet comptable</div><div class="text-xs text-[#666] tracking-tight">Nice</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden bg-[#0a0a0a] text-white">
+    <div class="absolute inset-0 opacity-60 mix-blend-screen pointer-events-none">
+      <div class="absolute left-[10%] top-[-10%] h-[30rem] w-[30rem] rounded-full bg-[#4f46e5] blur-[120px]"></div>
+      <div class="absolute right-[5%] bottom-[-20%] h-[40rem] w-[40rem] rounded-full bg-[#7c3aed] blur-[150px] opacity-70"></div>
+    </div>
+    <div class="relative mx-auto max-w-[90rem] px-4 py-32 text-center sm:px-6 lg:px-8 lg:py-48 scroll-reveal">
+      <h2 class="mx-auto max-w-4xl text-[clamp(3rem,6vw,6rem)] font-medium leading-[0.9] tracking-tighter">
+        Je choisis ma formule
+      </h2>
+      <p class="mt-6 text-base text-white/60 max-w-md mx-auto">Sans engagement. Vous montez ou descendez de formule quand vous voulez.</p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="mailto:bonjour@bugzero.fr" class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-8 py-4 text-sm font-medium text-[#0a0a0a] transition-all hover:scale-105">
+          <span class="relative z-10 flex items-center gap-2">
+            Demander ma formule
+            <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5" class="transition-transform group-hover:translate-x-1"></iconify-icon>
+          </span>
+        </a>
+        <a href="tel:+33678565430" class="rounded-full bg-transparent border border-white/20 px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-white/10">
+          06 78 56 54 30
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer">
+    <Footer />
+  </fragment>
+</Layout>
